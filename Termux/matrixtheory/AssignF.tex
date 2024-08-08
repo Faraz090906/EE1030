@@ -1,0 +1,369 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                      
+\usepackage{calc}                                            
+\usepackage{multirow}                                        
+\usepackage{hhline}                                          
+\usepackage{ifthen}                                          
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{ulem}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\title{{\uline{Assignment 1 \\ } \\}Chapter-11: Limits, Continuity and Differentiability}
+\author{{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}}
+
+
+ 
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{D \brak{11-25}: MCQs with One or More than One correct}
+
+\begin{enumerate}
+    \item
+%1st question
+\begin{flushleft}
+
+
+   
+    {Let $g\brak{x}=x.f\brak{x}$, where\\[6pt] $f\brak{x}$ = $\begin{cases}
+        x.\sin\frac{1}{x}, & x\neq 0\\
+        0, & x=0
+    \end{cases}$
+    . At $x=0$} \\
+   
+    \hfill
+    {(1994)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $g$ is differentiable but $g'$ is not continuous
+        \item $g$ is differentiable while $f$ is not
+        \item both $f$ and $g$ are differentiable
+        \item $g$ is differentiable and $g'$ is continuous
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%2nd question
+\begin{flushleft}
+   
+     {The function $f\brak{x}$ = max$\{(1-x),(1+x),2\}$, $x\in (-\infty,\infty)$} \\
+
+    \hfill
+    {(1995)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item continuous at all points
+        \item differentiable at all points
+        \item differentiable at all points except at $x=l$ and $x=-1$
+        \item continuous at all points except at $x=l$ and $x=-1$ where it is discontinuous
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%3rd question
+\begin{flushleft}
+    Let $h\brak{x}$ = min$\{x,x^{2}\}$ \\
+
+    \hfill
+    {(1998-2 marks)}
+
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $h$ is continuous for all $x$
+        \item $h$ is differentiable for all $x$
+        \item $h'(t)=1$, for all $x >1$
+        \item $h$ is not differentiable at two values of $x$
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%4th question
+\begin{flushleft}
+   
+    {$\lim_{x \to1}\frac{\sqrt{1-\cos 2(x-1)}}{x-1}$} \\
+
+    \hfill
+    {(1998-2 marks)}
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item exists and it equals $\sqrt{2}$
+        \item exists and it equals $-\sqrt{2}$
+        \item does not exist because $x-1\mapsto 0$
+        \item does not exist because the left-hand limit is not equal to the right-hand limit
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%5th question
+\begin{flushleft}
+   
+    {If $f\brak{x}$ = min $\{1,x^2,x^3\}$} \\
+
+    \hfill
+    {(2006, 5M, -1)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $f\brak{x}$ is continuous $\forall x \in R$
+        \item $f\brak{x}$ is continuous and differentiable everywhere
+        \item $f\brak{x}$ is not diferentiable at two points
+        \item $f\brak{x}$ is not differentiable at one point
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%6th question
+\begin{flushleft}
+   
+    {Let $L=\lim_{x \to0}\frac{a-\sqrt{a^2-x^2-\frac{x^2}{4}}}{x^4}, a>0$.\\ If L is finite, then} \\
+
+    \hfill
+    {(2009)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $a=2$
+        \item $a=1$
+        \item $L=\frac{1}{64}$
+        \item $L=\frac{1}{32}$
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%7th question
+\begin{flushleft}
+   
+    {Let $f:R \to R$ be a function such that $f(x+y)=f\brak{x}+f(y)$, $\forall x,y\in R$. If $f\brak{x}$ is differentiable at $x=0$, then}
+
+    \hfill
+    {(2011)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $f\brak{x}$ is differentiable only in a finite interval containing zero
+        \item $f\brak{x}$ is continuous $\forall x\in R$
+        \item $f'\brak{x}$ is constant $\forall x\in R$
+        \item $f\brak{x}$ is differentiable except at finitely many points
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%8th question
+\begin{flushleft}
+   
+    {If $f\brak{x}$=
+    $\begin{cases}
+        -x-\frac{\pi}{2}, & x\leq \frac{\pi}{2} \\
+        -\cos x, & \frac{\pi}{2}<x\leq 0 \\
+        x-1, & 0<x\leq1 \\
+        \ln x, & x>1
+    \end{cases}$}
+
+    \hfill
+    {(2011)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $f\brak{x}$ is continuous at $x=\frac{\pi}{2}$
+        \item $f\brak{x}$ is not differentiable at $x=0$
+        \item $f'\brak{x}$ is differentiable at $x=1$
+        \item $f\brak{x}$ is differentiable at $x=\frac{3}{2}$
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%9th question
+\begin{flushleft}
+   
+    {For every integer $n$, let $a_n$ and $b_n$, be real numbers. Let function $f\brak{x}: IR \mapsto IR$ be given by
+    $f\brak{x}$=
+    $\begin{cases}
+       a_n+\sin\pi x, & for x\in [2n,2n+1] \\
+       b_n+\cos\pi x, & for x\in (2n-1,2n)
+    \end{cases}$
+    for all integers $n$. If $f$ is continuous,then which of the following hold(s) for all $n$}
+
+    \hfill
+    {(2012)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $a_{n-1}-b_{n-1}=0$
+        \item $a_n-b_n=1$
+        \item $a_n-b_{n+1}=1$
+        \item $a_{n-1}-b_n=-1$
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%10th question
+\begin{flushleft}
+   
+    {For $a\in R$ (the set of all real numbers), $a\neq -1$
+    $\lim_{n\to\infty}\frac{(1^a+2^a+\cdots+n^a)}{(n+1)^a.[(na+1)+(na+2)+\cdots+(na+n)]}$ = $\frac{1}{60}$ Then $a=$ }
+
+    \hfill
+    {(\textit{JEE Adv.}2013)}
+   
+    \begin{enumerate}
+       
+        \item $5$
+        \item $7$
+        \item $\frac{-15}{2}$
+        \item $\frac{-17}{2}$
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%11th question
+\begin{flushleft}
+   
+    {Let $f: [a,b]\mapsto [1,\infty)$ be a continuous function and let $g: R\mapsto R$ be defined as
+    $f\brak{x}$=
+    $\begin{cases}
+       0, & if x<a, \\
+       \displaystyle \int_{a}^{x}{f(t) \, dt}, & if a\leq x\leq b \\
+       \displaystyle \int_{a}^{b}{f(t) \, dt}, & if x>b
+    \end{cases}$; then}
+
+    \hfill
+    {(\textit{JEE Adv.}2014)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $g\brak{x}$ is continuous but not differentiable at $a$
+        \item $g\brak{x}$ is differentiable on $R$
+        \item $g\brak{x}$ is continuous but not differentiable at $b$
+        \item $g\brak{x}$ is continuous and differentiable at either $(a)$ or $(b)$ but not both
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%12th question
+\begin{flushleft}
+   
+    {For every pair of continuous functions $f, g: [0, 1]\mapsto R$ such that max $\{f\brak{x}: x\in [0, 1]\}$= max $\{g\brak{x}: x\in [0, 1]\}$, the correct statement(s) is(are):}
+   
+    \hfill
+    {(\textit{JEE Adv.}2014)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $(f(c))^2+3.f(c)=(g(c))^2+3.g(c)$ for some $c\in [0,1]$
+        \item $(f(c))^2+f(c)=(g(c))^2+3.g(c)$ for some $c\in [0,1]$
+        \item $(f(c))^2+3.f(c)=(g(c))^2+g(c)$ for some $c\in [0,1]$
+        \item $(f(c))^2=(g(c))^2$ for some $c\in [0,1]$
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%13th question
+\begin{flushleft}
+   
+    {Let $g: R\mapsto R$ be a differentiable function with $g(0)=0$, $g'(0)=0$ and $g'(1)\neq 0$. Let $f\brak{x}=
+        \begin{cases}
+            \frac{x}{|x|}.g\brak{x}, & x\neq 0 \\
+            0, & x=0
+        \end{cases}$
+        and $h\brak{x}=e^{|x|}$ for all $x\in R$. Let $(foh)\brak{x}$ denote $f(h\brak{x})$ and $(hof)\brak{x}$ denote $h(f\brak{x})$. Then which of the following is(are) true?}
+       
+    \hfill
+    {(\textit{JEE Adv.}2015)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $f$ is differentiable at $x=0$
+        \item $h$ is differentiable at $x=0$
+        \item $foh$ is differentiable at $x=0$
+        \item $hof$ is differentiable at $x=0$  
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%14th question
+\begin{flushleft}
+   
+    {Let $a, b\in R$ and $f: R\mapsto R$ be defined by $f\brak{x}=a.\cos (|x^3-x|) +b.|x|.\sin (|x^3+x|)$. Then $f$ is}  
+       
+    \hfill
+    {(\textit{JEE Adv.}2016)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item differentiable at $x=0$ if $a=0$ and $b=1$
+        \item differentiable at $x=1$ if $a=1$ and $b=0$
+        \item {NOT} differentiable at $x=0$ if $a=1$ and $b=0$
+        \item {NOT} differentiable at $x=1$ if $a=0$ and $b=1$
+    \end{enumerate}
+\end{flushleft}
+
+    \item
+%15th question
+\begin{flushleft}
+   
+    {Let $f:[-\frac{1}{2}, 2]\mapsto R$ and $g:[-\frac{1}{2}, 2]\mapsto R$ be functions defined by $f\brak{x}=[x^2-3]$ and $g\brak{x}=|x|.f\brak{x}+|4x-7|.f\brak{x}$, where $[y]$ denotes the greatest integer less than or equal to $y$ for $y\in R$. Then}  
+       
+    \hfill
+    {(\textit{JEE Adv.}2016)}
+   
+    \begin{enumerate}[label=(\alph*)]
+       
+        \item $f$ is discontinuous exactly at three points in $[-\frac{1}{2}, 2]$
+        \item $f$ is discontinuous exactly at four points in $[-\frac{1}{2}, 2]$
+        \item $g$ is {NOT} differentiable exactly at four points in $[-\frac{1}{2}, 2]$
+        \item $g$ is {NOT} differentiable exactly at five points in $[-\frac{1}{2}, 2]$
+    \end{enumerate}
+\end{flushleft}
+
+\end{enumerate}
+
+\end{document}
