@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  11 AUG 2024 15:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  11 AUG 2024 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**AssignF.te
+**AssignF.tex
 (./AssignF.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
@@ -1261,31 +1261,31 @@ LaTeX Info: Redefining \nameref on input line 54.
 \openout5 = `AssignF.out'.
 
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 7
-4.
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 7
-4.
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 7
-4.
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 7
-4.
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 7
-4.
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
@@ -1296,7 +1296,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (16.15253pt too wide) detected at line 235
+Overfull \hbox (16.15253pt too wide) detected at line 232
 []
  []
 
@@ -1305,13 +1305,13 @@ Package rerunfilecheck Info: File `AssignF.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29788 strings out of 478287
- 585442 string characters out of 5849290
- 868179 words of memory out of 5000000
+ 29785 strings out of 478287
+ 585426 string characters out of 5849290
+ 869179 words of memory out of 5000000
  47260 multiletter control sequences out of 15000+600000
  529248 words of font info for 147 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,10n,96p,410b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,10n,96p,411b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1320,7 +1320,7 @@ fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AssignF.pdf (2 pages, 58494 bytes).
+Output written on AssignF.pdf (2 pages, 58463 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
