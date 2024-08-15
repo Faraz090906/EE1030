@@ -1,7 +1,21 @@
 %iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt]{IEEEtran}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+
+%\usepackage[a5paper, top=10mm, bottom=10mm, left=10mm, right=10mm]{geometry}
+
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\setlength{\intextsep}{10pt} % Space between text and floats
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -34,16 +48,6 @@
 \usepackage{ulem}
 
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{problem}{Problem}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{example}{Example}[section]
-\newtheorem{definition}[problem]{Definition}
-\newcommand{\BEQA}{\begin{eqnarray}}
-\newcommand{\EEQA}{\end{eqnarray}}
-\newcommand{\define}{\stackrel{\triangle}{=}}
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \renewcommand{\thefigure}{\theenumi}
@@ -58,7 +62,6 @@
 \author{{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}}
 
 
- 
 \maketitle
 \newpage
 \bigskip
@@ -87,7 +90,10 @@
 
     \item 
 %2nd question
-	    The function $f\brak{x}$ = max$\cbrak{\brak{1-x},\brak{1+x},2}$, $x\in \brak{-\infty,\infty}$ 
+	    The function \begin{align*}
+		f\brak{x} = max\cbrak{\brak{1-x},\brak{1+x},2},
+		\end{align*} 
+		$x\in \brak{-\infty,\infty}$  
 
     \hfill 
     {\brak{1995}}
@@ -152,13 +158,14 @@
     \hfill 
     {\brak{2009}}
     
+    \begin{multicols}{4}
     \begin{enumerate}
-        
         \item $a=2$ 
         \item $a=1$
         \item $L=\frac{1}{64}$
         \item $L=\frac{1}{32}$
     \end{enumerate}
+    \end{multicols}	    
 
 
     \item 
@@ -231,6 +238,7 @@
     \hfill 
     {\brak{JEE Adv.2013}}
     
+    \begin{multicols}{4}
     \begin{enumerate}
         
         \item $5$
@@ -238,6 +246,7 @@
         \item $\frac{-15}{2}$ 
         \item $\frac{-17}{2}$ 
     \end{enumerate}
+    \end{multicols}
 
 
     \item 
