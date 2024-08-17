@@ -1,7 +1,15 @@
-%iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -17,8 +25,8 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
-\usepackage{gvv}                                        
-%\def\inputGnumericTable{}                                 
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
 \usepackage{array}                                            
@@ -28,47 +36,38 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{float}
 
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{problem}{Problem}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{example}{Example}[section]
-\newtheorem{definition}[problem]{Definition}
-\newcommand{\BEQA}{\begin{eqnarray}}
-\newcommand{\EEQA}{\end{eqnarray}}
-\newcommand{\define}{\stackrel{\triangle}{=}}
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
 \renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
 
 % Marks the beginning of the document
 \begin{document}
 \bibliographystyle{IEEEtran}
 
-\title{Assignment 3 \\ Chapter-15: \\ Matrices and Determinants}
+\title{Assignment 2 \\ Chapter-15: \\ Matrices and Determinants}
 \author{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}
 
-\maketitle
-\newpage
-\bigskip
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
 
 \begin{enumerate}
 
 \item
 %1st question
-	If $a>0$ and discriminant of $a.x^{2}+2.b.x+c$ is -ve, then
+	If $a>0$ and discriminant of $ax^{2}+2bx+c$ is -ve, then
 	$\mydet{a & b & ax+b \\ b & c & bx+c \\ ax+b & bx+c & 0}$ is equal to 
 	
 	\hfill{\sbrak{2002}}	
 
-	\begin{enumerate}[label=(\alph*)]
+	\begin{enumerate}
 		\item +ve
 		\item $\brak{ac-b^2}\brak{ax^2+2bx+c}$
 		\item -ve
@@ -81,7 +80,7 @@
 
 	\hfill{\sbrak{2003}}
 
-	\begin{enumerate}[label=(\alph*)]
+	\begin{enumerate}
                 \item satisfy $a+ 2b+3c = 0$
                 \item are in A.P
                 \item are in G.P
@@ -95,7 +94,7 @@
         
         \hfill{\sbrak{2003}}
         
-        \begin{enumerate}[label=(\alph*)]
+        \begin{enumerate}
 		\item $\omega^{2}$ 
                 \item 0                      
                 \item 1
@@ -109,7 +108,7 @@
         
         \hfill{\sbrak{2003}}
                                              
-        \begin{enumerate}[label=(\alph*)]
+        \begin{enumerate}
 		\item $\alpha=2ab, \beta=a^{2}+b^{2}$
                 \item $\alpha=a^{2}+b^{2}, \beta=ab$
                 \item $\alpha=a^{2}+b^{2}, \beta=2ab$
