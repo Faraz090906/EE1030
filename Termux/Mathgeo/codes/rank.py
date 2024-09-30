@@ -23,10 +23,16 @@ import subprocess
 import shlex
 #end if
 
-#Given points
-A = np.array(([3, 4])).reshape(-1,1) 
-B = np.array(([6, 7])).reshape(-1,1)  
-C = np.array(([9, 10])).reshape(-1,1)  
+# Load the points from the text file
+points = np.loadtxt("points.dat", delimiter=',',max_rows=len(list(open("./points.dat")))-1)
+
+# Extract the x and y coordinates
+x = points[:, 0]
+y = points[:, 1]
+
+A = np.array([points[0,0],points[0,1]])
+B = np.array([points[20,0],points[20,1]])
+C = np.array([points[41,0],points[41,1]])  
 
 # Print rank 
 rank = LA.matrix_rank(np.block([B-A, C-A]))
