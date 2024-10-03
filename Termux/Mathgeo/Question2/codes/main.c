@@ -10,7 +10,7 @@ int main()
 
 	FILE *ptr ;
 	ptr = fopen("main.txt", "w") ;
-	for ( float t=-4; t<=10; t+=0.5 )
+	for ( float t=-4; t<=10; t+=0.25 )
 	{
 		double x = a*t*2 ;
 		double y = a*t*t ;
