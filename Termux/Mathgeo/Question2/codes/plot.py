@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load points from the file
-points = np.loadtxt("main.txt", delimiter=' ', max_rows=len(list(open("main.txt")))-1)
+points = np.loadtxt("area_points.txt", delimiter=' ', max_rows=len(list(open("area_points.txt")))-1)
 
 # Extract x and y values
 x = points[:, 0]
