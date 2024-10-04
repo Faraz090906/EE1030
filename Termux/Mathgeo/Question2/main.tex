@@ -63,22 +63,29 @@
 \textbf{SOLUTION:} \\
     \begin{table}[h!]    
       \centering
-      \input{tables/table1.tex}
+      \input{tables/table.tex}
       \label{table: 9-9.3-6}
     \end{table}\\
 
-    \begin{table}[h!]    
-      \centering
-      \input{tables/table2.tex}
-      \caption{Variables Used}
-      \label{table: 9-9.3-6}
-    \end{table}
     Substituting the given values, we have \\
 \begin{align}
 	\vec{V} &= \myvec{ 0 & 0 \\ 0 & 1 } \\
 	\vec{u} &= \myvec{ \frac{-1}{2} \\ 0 } \\
 	f &= 0 
 \end{align}\\
+
+we get the equation of curve as \\
+\begin{align}
+	\vec{y} &= \vec{x^TVx}
+\end{align}\\
+
+Line equation of form $\vec{x}=\vec{h}+k\vec{m}$
+
+If a line intersects the conic, $k$ value of intersecting point is given by,
+\begin{align}
+	k_i=\frac{-\vec{m}^{\top}\brak{\vec{Vh}+\vec{u}}\pm\sqrt{\sbrak{\vec{m}^{\top}\brak{\vec{Vh}+\vec{u}}}^2-g\brak{h}\brak{\vec{m}^{\top}\vec{Vm}}}}{\vec{m}^{\top}\vec{Vm}}
+\end{align}
+
 Substituting the values, we get the point of intersection as \\
 \begin{align}
 	\kappa_i &= -\myvec{0 \\ 1}\myvec{\frac{-1}{2} & 0} \pm \sqrt{\sbrak{\myvec{0 & 1}\myvec{ \frac{-1}{2} \\ 0} }^2 + 1\brak{1}} \\
