@@ -2,54 +2,39 @@ import numpy as np
 import matplotlib.pyplot as plt
 import ctypes
 
-# Define the structure for points in C-style
-class Point(ctypes.Structure):
-    _fields_ = [("x", ctypes.c_double), ("y", ctypes.c_double)]
+# Load the shared C library
+lib = ctypes.CDLL('./libarea_calculator.so')
 
-def generate_points(a, b, c, x_start, x_end, num_points):
-    # Allocate memory for points
-    point_array_type = Point * num_points
-    points = point_array_type()
+# Define the C function argument and return types
+lib.area.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_double]
+lib.area.restype = ctypes.c_double
 
-    x_values = np.linspace(x_start, x_end, num_points)
-    
-    for i in range(num_points):
-        points[i].x = x_values[i]
-        points[i].y = a * (x_values[i] ** 2) + b * x_values[i] + c
-    
-    # Return pointer to the allocated points
-    return ctypes.cast(points, ctypes.POINTER(Point))
+lib.generate_points.argtypes = [
+    ctypes.c_double, ctypes.c_double, ctypes.c_double,
+    ctypes.c_double, ctypes.c_double, ctypes.c_int,
+    ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double)
+]
 
-if __name__ == "__main__":
-    # Parameters for the parabola y = x^2
-    a, b, c = 1, 0, 0
-    num_points = 1000  # Total number of points for plotting
-
-    # Generate points for the area calculation from -2 to 1
-    area_x_start, area_x_end = -2, 1
-    area_points_ptr = generate_points(a, b, c, area_x_start, area_x_end, num_points)
-
-    # Load the shared C library
-    lib = ctypes.CDLL('./libarea_calculator.so')  # Ensure the correct path
-
-    # Define the function argument and return types
-    lib.area.argtypes = [ctypes.c_double, ctypes.c_double]
-    lib.area.restype = ctypes.c_double
-    
+def main(a, b, c, x_start, x_end, num_points):
     # Calculate the area using the C function
-    area = lib.area(area_x_start, area_x_end)  # Calculate area from -2 to 1
-    
-    print(f"Calculated Area (using Riemann sum) from ({area_x_start}, {area_x_start**2}) to ({area_x_end}, {area_x_end**2}): {area:.2f}")
+    area = lib.area(a, b, c, -2.0, 1.0)  # Calculate area from -2 to 1
+    print(f"Calculated Area (using Riemann sum) from (-2, {function(a, b, c, -2):.2f}) to (1, {function(a, b, c, 1):.2f}): {area:.2f}")
 
-    # Prepare data for plotting the full range from -3 to 3
-    plot_x_start, plot_x_end = -3, 3
-    plot_x_vals = np.linspace(plot_x_start, plot_x_end, num_points)
-    plot_y_vals = a * (plot_x_vals ** 2) + b * plot_x_vals + c
-    
+    # Allocate memory for points
+    points_x = (ctypes.c_double * num_points)()
+    points_y = (ctypes.c_double * num_points)()
+
+    # Generate points using the C function
+    lib.generate_points(a, b, c, x_start, x_end, num_points, points_x, points_y)
+
+    # Prepare data for plotting
+    plot_x_vals = np.array(points_x)
+    plot_y_vals = np.array(points_y)
+
     # Plot the lines
     plt.axvline(x=-2, label='x = -2', color='orange', linestyle='--')
     plt.axvline(x=1, label='x = 1', color='red', linestyle='--')
-    
+
     plt.axhline(y=0, label='y = 0', color='black', linestyle='-')  # Horizontal line for y=0
     plt.axvline(x=0, label='x = 0', color='black', linestyle='-')  # Vertical line for x=0
 
@@ -59,14 +44,13 @@ if __name__ == "__main__":
     # Shade the area under the curve between -2 and 1
     plt.fill_between(plot_x_vals, plot_y_vals, 0, where=((plot_x_vals >= -2) & (plot_x_vals <= 1)), color='green', alpha=0.5, label='Shaded Area')
 
-    # Extract specific points from the generated points using pointers
-    first_point = area_points_ptr[0]  # First point
-    last_point = area_points_ptr[num_points - 1]  # Last point
-
-    # Plot the specific points
-    for point in [first_point, last_point]:
-        plt.scatter(point.x, point.y, color='red', marker='o')
-        plt.text(point.x, point.y, f'({point.x:.2f}, {point.y:.2f})', fontsize=10, verticalalignment='bottom', horizontalalignment='right')
+    # Get points at the limits -2 and 1
+    limit_points = [(-2, function(a, b, c, -2)), (1, function(a, b, c, 1))]
+    
+    # Plot the limit points
+    for x, y in limit_points:
+        plt.scatter(x, y, color='red', marker='o')
+        plt.text(x, y, f'({x:.2f}, {y:.2f})', fontsize=10, verticalalignment='bottom', horizontalalignment='right')
 
     plt.title('Points on the Parabola and Area Calculation')
     plt.xlabel('X-axis')
@@ -75,4 +59,11 @@ if __name__ == "__main__":
     plt.legend()
     plt.savefig('../figs/fig.png')
     plt.show()
+
+def function(a, b, c, x):
+    return a * x**2 + b * x + c
+
+if __name__ == "__main__":
+    # Example usage
+    main(a=1, b=0, c=0, x_start=-3, x_end=3, num_points=1000)
 
