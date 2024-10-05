@@ -17,7 +17,8 @@ def generate_points(a, b, c, x_start, x_end, num_points):
         points[i].x = x_values[i]
         points[i].y = a * (x_values[i] ** 2) + b * x_values[i] + c
     
-    return points
+    # Return pointer to the allocated points
+    return ctypes.cast(points, ctypes.POINTER(Point))
 
 if __name__ == "__main__":
     # Parameters for the parabola y = x^2
@@ -26,11 +27,11 @@ if __name__ == "__main__":
 
     # Generate points for the area calculation from -2 to 1
     area_x_start, area_x_end = -2, 1
-    area_points = generate_points(a, b, c, area_x_start, area_x_end, num_points)
+    area_points_ptr = generate_points(a, b, c, area_x_start, area_x_end, num_points)
 
     # Load the shared C library
-    lib = ctypes.CDLL('./area_calculator.so')
-    
+    lib = ctypes.CDLL('./libarea_calculator.so')  # Ensure the correct path
+
     # Define the function argument and return types
     lib.area.argtypes = [ctypes.c_double, ctypes.c_double]
     lib.area.restype = ctypes.c_double
@@ -58,13 +59,14 @@ if __name__ == "__main__":
     # Shade the area under the curve between -2 and 1
     plt.fill_between(plot_x_vals, plot_y_vals, 0, where=((plot_x_vals >= -2) & (plot_x_vals <= 1)), color='green', alpha=0.5, label='Shaded Area')
 
-    # Extract specific points from the generated points for the area calculation
-    specific_points = [(area_points[0].x, area_points[0].y), (area_points[-1].x, area_points[-1].y)]
-    
+    # Extract specific points from the generated points using pointers
+    first_point = area_points_ptr[0]  # First point
+    last_point = area_points_ptr[num_points - 1]  # Last point
+
     # Plot the specific points
-    for (x, y) in specific_points:
-        plt.scatter(x, y, color='red', marker='o')
-        plt.text(x, y, f'({x:.2f}, {y:.2f})', fontsize=10, verticalalignment='bottom', horizontalalignment='right')
+    for point in [first_point, last_point]:
+        plt.scatter(point.x, point.y, color='red', marker='o')
+        plt.text(point.x, point.y, f'({point.x:.2f}, {point.y:.2f})', fontsize=10, verticalalignment='bottom', horizontalalignment='right')
 
     plt.title('Points on the Parabola and Area Calculation')
     plt.xlabel('X-axis')
