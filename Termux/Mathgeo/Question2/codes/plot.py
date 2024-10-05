@@ -38,7 +38,7 @@ if __name__ == "__main__":
     # Calculate the area using the C function
     area = lib.area(area_x_start, area_x_end)  # Calculate area from -2 to 1
     
-    print(f"Calculated Area (using Riemann sum) from ({area_x_start}, 0) to ({area_x_end}, {area_x_end**2}): {area:.2f}")
+    print(f"Calculated Area (using Riemann sum) from ({area_x_start}, {area_x_start**2}) to ({area_x_end}, {area_x_end**2}): {area:.2f}")
 
     # Prepare data for plotting the full range from -3 to 3
     plot_x_start, plot_x_end = -3, 3
