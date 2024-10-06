@@ -67,13 +67,11 @@ plt.plot(x_circle_np, y_circle_np, label='Circle: $4x^2 + 4y^2 = 9$', color='ora
 plt.plot(x_circle_np, -y_circle_np, color='orange')  # Negative side of circle
 
 # Plot intersection points
-if x1 != 0 or y1_pos != 0:
-    plt.plot(x1, y1_pos, 'ro') 
-    plt.text(x1, y1_pos, f'({x1:.2f}, {y1_pos:.2f})')
+plt.plot(x1, y1_pos, 'ro') 
+plt.text(x1, y1_pos, f'({x1:.2f}, {y1_pos:.2f})')
 
-if x1 != 0 or y1_neg != 0:
-    plt.plot(x1, y1_neg, 'ro')  
-    plt.text(x1, y1_neg, f'({x1:.2f}, {y1_neg:.2f})')
+plt.plot(x1, y1_neg, 'ro')  
+plt.text(x1, y1_neg, f'({x1:.2f}, {y1_neg:.2f})')
 
 # Generate the curves 
 lib.gen_parab(x_parab, y_parab, num_points, 0.0, 3.0, a)
