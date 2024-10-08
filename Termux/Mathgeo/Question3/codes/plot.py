@@ -12,13 +12,19 @@ class Parabola(ctypes.Structure):
                 ("num_points", ctypes.c_int),
                 ("a", ctypes.c_double),
                 ("x_min", ctypes.c_double),
-                ("x_max", ctypes.c_double)]
+                ("x_max", ctypes.c_double),
+                ("V", ctypes.POINTER(ctypes.POINTER(ctypes.c_double))),
+                ("u", ctypes.POINTER(ctypes.c_double)),
+                ("f", ctypes.c_double)]
 
 class Circle(ctypes.Structure):
     _fields_ = [("x_values", ctypes.POINTER(ctypes.c_double)),
                 ("y_values", ctypes.POINTER(ctypes.c_double)),
                 ("num_points", ctypes.c_int),
-                ("r", ctypes.c_double)]
+                ("r", ctypes.c_double),
+                ("V", ctypes.POINTER(ctypes.POINTER(ctypes.c_double))),
+                ("u", ctypes.POINTER(ctypes.c_double)),
+                ("f", ctypes.c_double)]
 
 # Define the C functions 
 lib.create_parabola.argtypes = [ctypes.c_int, ctypes.c_double, ctypes.c_double, ctypes.c_double]

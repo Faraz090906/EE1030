@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include "libs/matfun.h"
+#include "libs/geofun.h"
 
 typedef struct 
 {
@@ -9,7 +11,10 @@ typedef struct
     int num_points;
     double a; 
     double x_min; 
-    double x_max; 
+    double x_max;
+    double **V;
+    double **u;
+    double f; 
 } Parabola;
 
 typedef struct 
@@ -18,6 +23,9 @@ typedef struct
     double* y_values;
     int num_points;
     double r; 
+    double **V;
+    double **u;
+    double f;
 } Circle;
 
 Parabola* create_parabola(int num_points, double a, double x_min, double x_max) 
@@ -29,6 +37,8 @@ Parabola* create_parabola(int num_points, double a, double x_min, double x_max)
     parabola->a = a;
     parabola->x_min = x_min;
     parabola->x_max = x_max;
+    parabola->V = createMat(2, 2);
+    parabola->u = createMat(2, 1);
     return parabola;
 }
 
@@ -39,21 +49,31 @@ Circle* create_circle(int num_points, double r)
     circle->y_values = (double*)malloc(num_points * sizeof(double));
     circle->num_points = num_points;
     circle->r = r;
+    circle->V = createMat(2, 2);
+    circle->u = createMat(2, 1);
     return circle;
 }
 
 void free_parabola(Parabola* parabola) 
 {
-    free(parabola->x_values);
-    free(parabola->y_values);
-    free(parabola);
+    if (parabola) {
+        free(parabola->x_values);
+        free(parabola->y_values);
+        free(parabola->V);
+        free(parabola->u);
+        free(parabola);
+    }
 }
 
 void free_circle(Circle* circle) 
 {
-    free(circle->x_values);
-    free(circle->y_values);
-    free(circle);
+    if (circle) {
+        free(circle->x_values);
+        free(circle->y_values);
+        free(circle->V);
+        free(circle->u);
+        free(circle);
+    }
 }
 
 // Generating points of parabola y^2 = 4ax
@@ -82,24 +102,91 @@ void gen_circle(Circle* circle)
 // Function to find intersections between the parabola and circle
 void find_intersections(double* intersection_points, Parabola* parabola, Circle* circle) 
 {
-    double x_p = 0;
-    double y_p;
-    double x_max = parabola->x_max;
+    circle->V[0][0] = pow(circle->r, 2);
+    circle->V[1][0] = 0.0;
+    circle->V[0][1] = 0.0;
+    circle->V[1][1] = pow(circle->r, 2);
     
-    for (double i = 0; x_p <= x_max; i += 0.5) 
+    parabola->V[0][0] = 0.0;
+    parabola->V[1][0] = 0.0;
+    parabola->V[0][1] = 0.0;
+    parabola->V[1][1] = 1.0;
+    
+    circle->u[0][0] = 0.0;
+    circle->u[1][0] = 0.0;
+    
+    parabola->u[0][0] = -2 * parabola->a;
+    parabola->u[1][0] = 0.0;
+    
+    circle->f = -pow(circle->r, 4);
+    parabola->f = 0.0;
+    
+    double mu = (double)(-1/pow(circle->r, 2));
+    
+    double cV1, cV2, cV3, cV4;
+    double pV1, pV2, pV3, pV4;
+    
+    cV1 = circle->V[0][0];
+    cV2 = circle->V[1][0];
+    cV3 = circle->V[0][1];
+    cV4 = circle->V[1][1];
+    
+    pV1 = parabola->V[0][0];
+    pV2 = parabola->V[1][0];
+    pV3 = parabola->V[0][1];
+    pV4 = parabola->V[1][1];
+    
+    double cu1, cu2;
+    double pu1, pu2;
+    
+    cu1 = circle->u[0][0];
+    cu2 = circle->u[1][0];
+    
+    pu1 = parabola->u[0][0];
+    pu2 = parabola->u[1][0];
+    
+    double cf, pf;
+    
+    cf = circle->f;
+    pf = parabola->f;
+    
+    double x_coordinate, y_coordinate;
+    
+    double A, B, C;
+    A = pV1 + pV2 + mu * (cV1 + cV2);
+    B = 2 * (pu1 + mu * cu1) + 4 * parabola->a * (pV3 + pV4 + mu * (cV3 + cV4));
+    C = pf + mu * (cf);
+    
+    double discriminant = pow(B, 2) - 4 * A * C;
+    if ( discriminant < 0 ) 
     {
-        x_p = parabola->x_min + i;
-        y_p = sqrt(4 * parabola->a * x_p);
-        double y_c = sqrt(pow(circle->r, 2) - pow(x_p, 2));
-        
-        if (y_c == y_p) {
-            intersection_points[0] = x_p; 
-            intersection_points[1] = y_p;
-            intersection_points[2] = x_p; 
-            intersection_points[3] = -y_p;
-            break;
-        }
+	printf("no intersections\n");
+    } 
+    else if ( discriminant == 0 ) 
+    {
+	x_coordinate = -B / (2 * A);
+	y_coordinate = sqrt(4 * parabola->a * x_coordinate);
+    } 
+    else 
+    {
+	double x_coordinate_1 = (-B + sqrt(discriminant)) / (2 * A);
+	double x_coordinate_2 = (-B - sqrt(discriminant)) / (2 * A);
+	    
+	if (x_coordinate_1 > 0) 
+	{
+	    x_coordinate = x_coordinate_1;
+	    y_coordinate = sqrt(4 * parabola->a * x_coordinate);
+	} 
+	else 
+	{
+	    x_coordinate = x_coordinate_2;
+	    y_coordinate = sqrt(4 * parabola->a * x_coordinate);
+	}
     }
+    intersection_points[0] = x_coordinate; 
+    intersection_points[1] = y_coordinate;
+    intersection_points[2] = x_coordinate; 
+    intersection_points[3] = -y_coordinate;  
 }
 
 // Calculating the area under the parabola using the trapezoidal rule
