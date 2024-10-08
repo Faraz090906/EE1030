@@ -56,7 +56,8 @@ Circle* create_circle(int num_points, double r)
 
 void free_parabola(Parabola* parabola) 
 {
-    if (parabola) {
+    if (parabola) 
+    {
         free(parabola->x_values);
         free(parabola->y_values);
         free(parabola->V);
@@ -67,7 +68,8 @@ void free_parabola(Parabola* parabola)
 
 void free_circle(Circle* circle) 
 {
-    if (circle) {
+    if (circle) 
+    {
         free(circle->x_values);
         free(circle->y_values);
         free(circle->V);
