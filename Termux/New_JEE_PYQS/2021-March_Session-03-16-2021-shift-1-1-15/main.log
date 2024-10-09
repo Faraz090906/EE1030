@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  9 OCT 2024 12:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  9 OCT 2024 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1896,16 +1896,19 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [2] [3] [4] (./main.aux)
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+] [2] [3] [4] [5] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 49903 strings out of 478287
- 1166406 string characters out of 5849290
- 1635415 words of memory out of 5000000
+ 49904 strings out of 478287
+ 1166412 string characters out of 5849290
+ 1637415 words of memory out of 5000000
  67210 multiletter control sequences out of 15000+600000
  536107 words of font info for 164 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1918,10 +1921,10 @@ onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 68705 bytes).
+Output written on main.pdf (5 pages, 69263 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
- 83 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
+ 84 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
