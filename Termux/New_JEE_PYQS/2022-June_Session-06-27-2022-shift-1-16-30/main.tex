@@ -1,0 +1,240 @@
+%2021-March Session-03-16-2021-shift-1-1-15
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\title{Assignment 1 \\ 2022-June Session-06-27-2022-shift-1:16-30}
+\author{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\section*{MCQ}
+\begin{enumerate}
+    
+    %1st Question 
+    \item 
+    Five numbers $x_1, x_2, x_3, x_4, x_5$ are randomly selected from the numbers $1, 2, 3,\dots, 18$ and are arranged in the increasing order $\brak{x_1 < x_2 < x_3 < x_4 < x_5}$. The probability that $x_2 = 7$ and $x_4 = 11$ is:
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+    
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $\frac{1}{136}$
+        \item $\frac{1}{72}$
+        \item $\frac{1}{68}$
+        \item $\frac{1}{34}$
+    \end{multicols}
+    \end{enumerate}
+
+    %2nd Question
+    \item 
+    Let $X$ be a random variable having binomial distribution $\vec{B}\brak{7, p}$. If $\vec{P}\brak{X = 3} = 5\vec{P}\brak{X = 4}$, then the sum of the mean and the variance of $X$ is: 
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+    
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $\frac{105}{16}$
+        \item $\frac{7}{16}$
+        \item $\frac{77}{36}$
+        \item $\frac{49}{16}$
+    \end{multicols}
+    \end{enumerate}
+
+    %3rd Question
+    \item 
+    The value of 
+    \begin{align*}
+        \cos{\brak{\frac{2\pi}{7}}} + \cos{\brak{\frac{4\pi}{7}}} + \cos{\brak{\frac{6\pi}{7}}} 
+    \end{align*}
+    is equal to;
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+    
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $-1$
+        \item $-\frac{1}{2}$
+        \item $-\frac{1}{3}$
+        \item $-\frac{1}{4}$
+    \end{multicols}
+    \end{enumerate}
+
+    %4th Question
+    \item 
+    \begin{align*}
+        \sin^{-1}{\brak{\sin{\frac{2\pi}{3}}}} + \cos^{-1}{\brak{\cos{\frac{7\pi}{6}}}} + \tan^{-1}{\brak{\tan{\frac{3\pi}{4}}}}
+    \end{align*}
+    is equal to;
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+    
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $\frac{11\pi}{12}$
+        \item $\frac{17\pi}{12}$
+        \item $\frac{31\pi}{12}$
+        \item $-\frac{3\pi}{4}$
+    \end{multicols}
+    \end{enumerate}
+
+    %5th Question
+    \item 
+    The boolean expression $\brak{ \sim \brak{p \land q}} \lor q$ is equivalent to: 
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+    
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item $q \to \brak{p \land q}$
+        \item $p \to q$
+        \item $p \to \brak{p \to q}$
+        \item $p \to \brak{p \lor q}$
+    \end{multicols}
+    \end{enumerate}
+
+\end{enumerate}
+
+\section*{INTEGER}
+
+\begin{enumerate}
+
+    %1st Question
+    \item 
+    let $f: \mathbf{R} \mapsto \mathbf{R}$ be a function defined by 
+    \begin{align*}
+        f\brak{x} = \frac{2e^{2x}}{e^{2x} + e^{x}}
+        \text{ then }
+        f\brak{\frac{1}{100}} + f\brak{\frac{2}{100}} + f\brak{\frac{3}{100}} + \dots + f\brak{\frac{99}{100}}
+    \end{align*}
+    is equal to \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %2nd Question 
+    \item
+    If the sum of all the roots of the equation 
+    \begin{align*}
+        e^{2x} - 11e^x - 45e^{-x} +\frac{81}{2}=0
+    \end{align*}
+    is $\log_e p$, then $p$ is equal to \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %3rd Question 
+    \item 
+    The positive value of the determinant of the matrix $A$, whose
+    \begin{align*}
+        adj\brak{adj\brak{A}} = \myvec{14 & 28 & -14 \\ -14 & 14 & 28 \\ 28 & -14 & 14},
+    \end{align*}
+    is \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %4th Question 
+    \item 
+    The number of ways, $16$ identical cubes, of which $11$ are blue and rest are red, can be placed in a row so that between any two red cubes there should be at least $2$ blue cubes, is \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %5th Question 
+    \item 
+    If the coefficient of $x^{10}$ in the binomial expansion of 
+    \begin{align*}
+        \brak{\frac{\sqrt{x}}{5^{\frac{1}{4}}} + \frac{\sqrt{5}}{x^{\frac{1}{3}}}}
+    \end{align*}
+    is $5^kl$ where $l,k \in \mathbf{N}$ and $l$ is co-prime to 5, then $k$ is equal to \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %6th Question 
+    \item 
+    \begin{align*}
+        A_1 = \cbrak{\brak{x,y} : \abs{x} \leq y^2, \abs{x} + 2y \leq 8} 
+        \text{ and }
+        A_2 = \cbrak{\brak{x,y} : \abs{x} + \abs{y} \leq k}.
+    \end{align*}
+    if $27\brak{Area A_1} = 5\brak{Area A_2}$, then $k$ is equal to: \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %7th Question 
+    \item 
+    If the sum of the first ten terms of the series 
+    \begin{align*}
+        \frac{1}{5} + \frac{2}{65} + \frac{3}{325} + \frac{4}{1025} + \frac{5}{2501} + \dots \text{ is } \frac{m}{n},
+    \end{align*}
+    where $m$ and $n$ are co-prime numbers, then $m + n$ is equal to \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %8th Question 
+    \item 
+    A rectangle $R$ with end points of one of its sides as \brak{1, 2} and \brak{3, 6} s inscribed in a circle. If the equation of a diameter of the circle is  $2x - y + 4 = 0$ , then the area of $R$ is \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %9th Question 
+    \item 
+    A circle of radius $2$ unit passes through the vertex and the focus of the parabola $y^2 =  2x$ and touches the parabola $y = \brak{x-\frac{1}{4}}^2 + \alpha$ where $\alpha > 0$. Then $\brak{4\alpha - 8}^2$ is equal to \rule{1cm}{0.1pt}
+
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+
+    %10th Question 
+    \item 
+    Let the mirror image of the point $\brak{a, b, c}$ with respect to the plane $ 3x - 4y + 12z + 19 = 0 $ be $\brak{\alpha - 6, \beta, \gamma}$. if $a + b + c = 5$, then $7\beta - 9\gamma$ is equal to \rule{1cm}{0.1pt}
+    
+    \hfill{\brak{\text{2022-Jun-27-S1}}}
+    
+\end{enumerate}
+\end{document}e
