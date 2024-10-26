@@ -1,0 +1,13 @@
+\begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \node [font=\normalsize] at (2.5,12.25) {};
+    \draw (3,12.5) to[D] (5,12.5);
+    \draw (3,12.5) to[sinusoidal voltage source, sources/symbol/rotate=auto] (3,10.5);
+    \draw (3,10.5) to[short] (5,10.5);
+    \draw (5,12.5) to[L ] (5,10.5);
+    \node [font=\small] at (4,13.25) {D};
+    \node [font=\small] at (4,13.25) {};
+    \node [font=\small] at (6,11.75) {Pure};
+    \node [font=\normalsize] at (2,11.75) {AC};
+    \node [font=\small] at (6,11.25) {L};
+\end{circuitikz}

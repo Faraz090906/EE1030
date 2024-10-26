@@ -1,0 +1,25 @@
+\begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (3.25,10.75) to[R] (3.25,7.25);
+    \draw (4.25,7.25) to[normal open switch] (4.25,10.75);
+    \draw (5.25,10.75) to[L ] (5.25,7.25);
+    \draw (3.25,10.75) to[short] (5.5,10.75);
+    \draw (5.5,10.75) to[normal open switch] (6.5,10.75);
+    \draw (6.5,10.75) to[R] (7.5,10.75);
+    \draw (7.5,10.75) to[R] (8.5,10.75);
+    \draw (8.5,10.75) to[short] (9,10.75);
+    \draw (9,10.75) to[C] (9,7.25);
+    \draw (3.25,7.25) to[short] (9,7.25);
+    \node [font=\normalsize, rotate around={90:(0,0)}] at (4,9.75) {$SW_1$};
+    \node [font=\normalsize] at (7.5,11.25) {$R_2$};
+    \node [font=\normalsize] at (8.5,11.25) {10$\Omega$};
+    \node [font=\normalsize] at (8.5,8.75) {C};
+    \node [font=\normalsize] at (9.5,8.75) {10V};
+    \node [font=\normalsize] at (2.5,9.25) {$R_1$};
+    \node [font=\normalsize] at (2.5,8.75) {10$\Omega$};
+    \draw [->, >=Stealth] (5.75,8.5) -- (5.75,9.75);
+    \node [font=\normalsize] at (6.5,9.25) {10};
+    \node [font=\normalsize] at (6.5,8.75) {amps};
+    \node [font=\normalsize] at (5.5,11.25) {$SW_2$};
+    \node [font=\normalsize] at (6,8.25) {L};
+\end{circuitikz}

@@ -1,0 +1,387 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\title{Assignment 1}
+\author{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\begin{enumerate}
+
+    %1st Question
+    \item 
+    The integral 
+    \begin{align*}
+        \frac{1}{2\pi} \int_0^{2\pi} \sin{\brak{t-\tau}}\cos{\tau}\, d\tau
+    \end{align*}
+    equals
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $\sin{t}\cos{t}$
+        \item $0$
+        \item $\frac{1}{2}\cos{t}$
+        \item $\frac{1}{2}\sin{t}$
+    \end{multicols}
+    \end{enumerate}
+
+    %2nd Question 
+    \item 
+    $X\brak{z} = 1 - 3z^{-1}$, $Y\brak{z} = 1 + 2z^{-2}$ are the Z-transforms of two signals $x\sbrak{n}$, $y\sbrak{n}$ respectively. A linear time invariant system has the impulse response $h\sbrak{n}$ defined by these two signals as 
+    \begin{align*}
+        h\sbrak{n} = x\sbrak{n-1} * y\sbrak{n}
+    \end{align*}
+    where $*$ denotes discrete time convolution. Then the output of the system for the input $\delta\sbrak{n-1}$
+    \begin{enumerate}
+        \item has Z-transform $z^{-1}X\brak{z}y\brak{z}$
+        \item equals $\delta\sbrak{n - 2} - 3\delta\sbrak{n - 3} + 2\delta\sbrak{n - 4} - 6\delta\sbrak{n - 5}$
+        \item has Z-transform $1 - 3z^{-1} + 2z^{-2} - 6z^{-3} $ 
+        \item does not satisfy any of the above three
+    \end{enumerate}
+
+    %3rd Question 
+    \item 
+    A loaded dice has the following probability distribution of occurrences
+
+    \begin{table}[h!]    
+      \centering
+      \input{tables/Q2007_54_3}
+    \end{table}
+    \begin{enumerate}
+        \item same as the occurrence of 3, 4, 5
+        \item same as the occurrence of 1, 2, 5
+        \item $\frac{1}{128}$
+        \item $\frac{5}{8}$
+    \end{enumerate}
+
+    %4th Question
+    \item 
+    let $x$ and $y$ be vectors in a three dimensional space and $\langle x,y\rangle$ denote their dot product. Then the determinant 
+    \begin{align*}
+        \text{det}\myvec{\langle x,x\rangle & \langle x,y\rangle \\ \langle y,x\rangle & \langle y,y\rangle} 
+    \end{align*}
+    \begin{enumerate}
+        \item is zero when $x$ and $y$ are linearly independent
+        \item is positive when $x$ and $y$ are linearly independent
+        \item is non-zero for all  non-zero $x$ and $y$
+        \item is zero when either of $x$ or $y$ is zero
+    \end{enumerate}
+
+    %5th Question 
+    \item 
+    The linear operater $L\brak{\vec{x}}$ is defined by the cross product $L\brak{\vec{x}} = \vec{b} \times \vec{x}$, where $\vec{b} = \myvec{0 & 1 & 0}^{T}$ and $\vec{x} = \myvec{x_1 & x_2 & x_3}^{T}$are three dimensional vectors. The $3 \times 3$ matrix $M$ of this operation satisfies 
+    \begin{align*}
+        L\brak{\vec{x}} = M\myvec{x_1 \\ x_2 \\ x_3}
+    \end{align*}
+    Then the eigenvalues of $M$ are
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $0, +1, -1$
+        \item $1, -1, 1$
+        \item $\iota, -\iota, 1$
+        \item $\iota, -\iota, 0$
+    \end{multicols}
+    \end{enumerate}
+
+    %6th Question
+    \item 
+    In the figure transformer $T_1$ has two secondaries, all three windings having same number turns and with polarities as indicated. One secondary is shorted by a $10\Omega$ resistor R, and the other by a $15 \mu F$ capacitor. The switch SW is opened $\brak{t = 0}$ when  the capacitor is charged to $5 V$ with the left plate as positive. At $t = 0+$ the voltage $V_P$ and the current $I_R$ are
+    \begin{figure}[H]
+        \centering
+        \resizebox{0.5\textwidth}{!}{\input{figs/Q2007_57_6}}
+    \end{figure}
+
+    \begin{enumerate}
+        \item $-25V, 0.0A$
+        \item very large voltage, very large current
+        \item $5.0V, 0.5A$
+        \item $-5.0V, -5.0A$
+    \end{enumerate}
+
+    %7th Question 
+    \item 
+    In the circuit of the adjacent figure the diode connects the ac source to a pure inductance L.
+    The diode conducts for
+
+    \begin{figure}[H]
+    \centering
+    \resizebox{0.39\textwidth}{!}{\input{figs/Q2007_58_7}}
+    \end{figure}
+    
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $90^\degree$
+        \item $180^\degree$
+        \item $270^\degree$
+        \item $360^\degree$
+    \end{multicols}
+    \end{enumerate}
+
+    %8th Question
+    \item 
+    IC 555 in the adjacent figure is configured as an stable multivibrator. It is enabled to oscillate at $t = 0$ by applying a hight input to pin 4. The pin description is: 1 and 8-supply; 2-trigger; 4-reset; 6-threshold; 7-discharge. The waveform appearing across the capacitor starting from $t = 0$, as observed on storage CRO is
+    \begin{figure}[H]
+        \centering
+        \resizebox{0.3\textwidth}{!}{\input{figs/Q2007_59_8}}
+    \end{figure}
+
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item 
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.25\textwidth}{!}{\input{figs/Q2007_59_8_a}}
+        \end{figure}
+
+        \item 
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.25\textwidth}{!}{\input{figs/Q2007_59_8_b}}
+        \end{figure}
+
+        \item 
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.25\textwidth}{!}{\input{figs/Q2007_59_8_c}}
+        \end{figure}
+
+        \item 
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.25\textwidth}{!}{\input{figs/Q2007_59_8_d}}
+        \end{figure}
+    \end{enumerate}
+\end{multicols}
+
+    %9th Question 
+    \item 
+    The circuit in the figure is a current commutated dc - dc chopper where, $Th_M$ is the main SCR and $Th_{AUX}$ is the auxiliary SCR. The load current is constant at $t = 0$. $Th_M$ si turned OFF between 
+    \begin{figure}[H]
+    \centering
+    \resizebox{0.6\textwidth}{!}{\input{figs/Q2007_60_9}}
+    \end{figure}
+    \begin{enumerate}
+        \item $0\mu s < t \leq 25\mu s$
+        \item $25\mu s < t \leq 50\mu s$
+        \item $50\mu s < t \leq 75\mu s$
+        \item $75\mu s < t \leq 100\mu s$
+    \end{enumerate}
+
+    %10th question 
+    \item 
+    In the circuit shown in figure switch $SW_1$ is initially CLOSED and $SW_2$ is OPEN. The inductor L carries a current of $10 A$ and the capacitor is charged to $10V$ with polarities as indicated. $SW_2$ is initially CLOSED at $t = 0-$ and $SW_1$ is OPENED at $t = 0$. The current through C and the voltage across L at $t = 0+$ is
+
+    \begin{figure}[H]
+    \centering
+    \resizebox{0.6\textwidth}{!}{\input{figs/Q2007_61_10}}
+    \end{figure}
+
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $55A$, $4.5V$
+        \item $5.5A$, $45V$
+        \item $45A$, $5.5V$
+        \item $4.5A$, $55V$
+    \end{multicols}
+    \end{enumerate}
+
+    %11th Question 
+    \item 
+    The R-L-C series circuit shown is supplied from a variable frequency voltage source. The admittance-locus of the R-L-C network at terminals AB for increasing frequency $\omega$ is
+
+    \begin{figure}[H]
+        \centering
+        \resizebox{0.3\textwidth}{!}{\input{figs/Q2007_62_11}}
+    \end{figure}
+
+        \begin{multicols}{2}
+        \begin{enumerate}  
+        
+        \item 
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.3\textwidth}{!}{\input{figs/Q2007_62_11_a}}
+        \end{figure}
+        \item 
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.3\textwidth}{!}{\input{figs/Q2007_62_11_b}}
+        \end{figure}
+        
+        \item 
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.26\textwidth}{!}{\input{figs/Q2007_62_11_c}}
+        \end{figure}
+        
+
+        \item 
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.26\textwidth}{!}{\input{figs/Q2007_62_11_d}}
+        \end{figure}
+        
+        \end{enumerate}
+        \end{multicols}
+
+    %12th Question 
+    \item 
+    In the figure given below all phasors are with reference to the potential at point "O". The locus of voltage phasor $\vec{v_{XY}}$ as R is varied from zero to infinity is shown by 
+
+    \begin{figure}[H]
+    \centering
+    \resizebox{0.4\textwidth}{!}{\input{figs/Q2007_63_12}}
+    \end{figure}
+
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item  
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.4\textwidth}{!}{\input{figs/Q2007_63_12_a}}
+        \end{figure}
+
+        \item  
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.4\textwidth}{!}{\input{figs/Q2007_63_12_b}}
+        \end{figure}
+
+        \item  
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.4\textwidth}{!}{\input{figs/Q2007_63_12_c}}
+        \end{figure}
+
+        \item  
+        \begin{figure}[H]
+        \centering
+        \resizebox{0.4\textwidth}{!}{\input{figs/Q2007_63_12_d}}
+        \end{figure}
+    \end{enumerate}
+    \end{multicols}
+
+    %13th Question
+    \item 
+    A $3V$ dc supply with an internal resistance of $2\Omega$ supplies a passive non-linear resistance characterized by the relation $V_{NL} = I_{NL}^2$. The power dissipated in non-linear resistance is
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item $1.0 W$
+        \item $1.5 W$
+        \item $2.5 W$
+        \item $3.0 W$
+    \end{multicols}
+    \end{enumerate}
+
+    %14th Question 
+    \item 
+    Consider the feedback control system shown below which is subjected to a unit step input. The system is stable and has the following parameter $\kappa_P = 4$, $\kappa_i = 10$, $\omega = 500$ and $\zeta = 0.7$
+
+    \begin{figure}[H]
+    \centering
+    \resizebox{1\textwidth}{!}{\input{figs/Q2007_65_14}}
+    \end{figure}
+
+    The steady state value of $z$ is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $1$
+            \item $0.25$
+            \item $0.1$
+            \item $0$
+        \end{enumerate}
+    \end{multicols}
+
+    %15th Question 
+    \item 
+    A three phase squirrel cage induction motor has a starting torque of $150\%$ and a maximum torque $300\%$ with respect to rated torque at rated voltage and rate frequency. Neglect the stator resistance and rotational losses. The value of slip for maximum torque
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $13.48\%$
+            \item $16.24\%$
+            \item $18.92\%$
+            \item $27.79\%$
+        \end{enumerate}
+    \end{multicols}
+
+    %16th Question 
+    \item 
+    The matrix $A$ given below is the node incidence matrix of  network. The columns correspond to the branches of the network while the rows correspond nodes. Let $\vec{V} = \sbrak{\nu_1 \nu_2 \dots \nu_6}^T$ denote the vector of branch voltages while $\vec{I} = \sbrak{i_1 i_2 \dots i_6}^T$ that of branch currents. The vector $\vec{E} = \sbrak{e_1 e_2 \dots e_6}^T$ denotes the vector of node voltages relative to common ground. 
+    \begin{align*}
+        A = \myvec{1 & 1 & 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & -1 & 1 & 0 \\ -1 & 0 & 0 & 0 & -1 & -1\\ 0 & 0 & -1 & 1 & 0 & 1}
+    \end{align*}
+    Which of the following statements are true?
+    \begin{enumerate}
+        \item The equations $\nu_1 - \nu_2 + \nu_3 = 0$, $\nu_3 + \nu_4 - \nu_5 = 0$ are the KVL equations for the networks for some loops 
+        \item The equations $\nu_1 - \nu_3 - \nu_6 = 0$, $\nu_4 + \nu_5 - \nu_6 = 0$ are the KVL equations for the networks for some loops
+        \item $\vec{E} = A\vec{V}$
+        \item $A\vec{V} = 0$ are KVL equations for the network
+    \end{enumerate}
+
+    %17th Question 
+    \item 
+    An isolated $50Hz$ synchronous generator is rated at $15MW$ which is also the maximum continuous power limit of its prime mover. It is equipped with a speed a speed governor with $5\%$ droop. Initially, the generator is feeding three loads of $4MW$ each at $50Hz$. One of these loads is programmed to trip PERMANENTLY if the frequency falls below $48Hz$. If an additional load $3.5MW$ is connected then frequency will settle down to
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $49.417Hz$
+            \item $49.917Hz$
+            \item $50.083Hz$
+            \item $50.583Hz$
+        \end{enumerate}
+    \end{multicols}
+    
+\end{enumerate}
+\end{document}

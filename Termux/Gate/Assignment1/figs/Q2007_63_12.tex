@@ -1,0 +1,25 @@
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (3,11.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (3,10);
+    \draw (3,10) to[sinusoidal voltage source, sources/symbol/rotate=auto] (3,8.5);
+    \draw (3,10) to[short] (3.75,10);
+    \draw (4.25,10) to[short] (5,10);
+    \draw (3,11.75) to[short] (5,11.75);
+    \draw (3,8.5) to[short] (5,8.5);
+    \draw (5,10) to[C] (5,8.5);
+    \draw (5,11.75) to[european resistor] (5,10);
+    \draw [->, >=Stealth] (4.5,10.5) -- (5.75,11.5);
+    \draw [->, >=Stealth] (2.5,10.75) -- (2.5,11.5);
+    \draw [->, >=Stealth] (2.5,9) -- (2.5,9.75);
+    \node at (3.75,10) [squarepole] {};
+    \node at (4.25,10) [squarepole] {};
+    \draw [->, >=Stealth] (3.75,10.25) -- (4.5,10.25);
+    \node [font=\normalsize] at (4,10.75) {$V_{XY}$};
+    \node [font=\normalsize] at (3.5,9.75) {  X};
+    \node [font=\normalsize] at (4.5,9.75) {Y};
+    \node [font=\normalsize] at (4,8.25) {O};
+    \node [font=\normalsize] at (2,9.25) {$V\angle 0^\degree$};
+    \node [font=\normalsize] at (2,11.25) {$V\angle 0^\degree$};
+    \node [font=\normalsize] at (5.5,8.75) {C};
+    \node [font=\normalsize] at (5,11.25) {R};
+\end{circuitikz}
