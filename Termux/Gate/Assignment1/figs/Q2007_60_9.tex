@@ -1,34 +1,17 @@
 \begin{circuitikz}
-    \tikzstyle{every node}=[font=\small]
-    \draw (3,11) to[battery2] (3,7);
-    \draw (3,11) to[short] (5.25,11);
-    \draw (5.25,11) to[D] (7,11);
-    \draw (7,11) to[short] (9,11);
-    \node at (5.25,11) [circ] {};
-    \node at (7,11) [circ] {};
-    \node at (8,11) [circ] {};
-    \node at (9,11) [circ] {};
-    \draw (3,7) to[short] (9,7);
-    \draw (8,7) to[D] (8,11);
-    \draw (9,11) to[european resistor] (9,7);
-    \node at (8,7) [circ] {};
-    \node at (9,7) [circ] {};
-    \draw (5.25,11) to[D] (5.25,9.75);
-    \draw (5.25,9.75) to[D] (7,9.75);
-    \draw (7,11) to[short] (7,8.75);
-    \draw (5.25,8.75) to[C] (6,8.75);
-    \draw (6,8.75) to[L ] (7,8.75);
-    \node at (6,8.75) [circ] {};
-    \draw (5.25,9.75) to[short] (5.25,8.75);
-    \node at (5.25,9.75) [circ] {};
-    \node at (7,9.75) [circ] {};
-    \node [font=\small] at (6,11.75) {$Th_M$};
-    \node [font=\small] at (6,10.25) {$Th_{AUX}$};
-    \node [font=\small] at (5,8.25) {$10\mu F$};
-    \node [font=\small] at (6.5,8.25) {$25.28\mu H$};
-    \node [font=\small] at (2,8.75) {230V};
-    \node [font=\small] at (9.5,9.25) {O};
-    \node [font=\small] at (9.5,9.75) {L};
-    \node [font=\small] at (9.5,8.75) {A};
-    \node [font=\small] at (9.5,8.25) {D};
+	\tikzstyle{every node}=[font=\normalsize]
+	\draw (2.25,8.25) to[battery2,l=$230V$] (2.25,4);
+	\draw (2.25,8.25) to[short] (4.25,8.25);
+	\draw (4.25,8.25) to[D,l={ \large $Th_{M}$}] (6.5,8.25);
+	\draw (4.25,8.25) to[D] (4.25,7);
+	\draw (4.25,7) to[D,l={ \large $Th_{AUX}$}] (6.5,7);
+	\draw (5,6.25) to[C,l={ \normalsize $10\mu F$}] (4.25,6.25);
+	\draw (6.5,6.25) to[L,l={ \normalsize $25.28\mu H$} ] (5,6.25);
+	\draw (4.25,7) to[short] (4.25,6.25);
+	\draw (6.5,8.25) to[short] (6.5,6.25);
+	\draw (6.5,8.25) to[short] (8.5,8.25);
+	\draw (2.25,4) to[short] (8.5,4);
+	\draw (8.5,8.25) to[european resistor,l={ \normalsize LOAD}] (8.5,4);
+	\draw (7.5,4) to[D] (7.5,8.25);
 \end{circuitikz}
+

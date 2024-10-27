@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  26 OCT 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  27 OCT 2024 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1901,33 +1901,25 @@ File: ts1txr.fd 2000/12/15 v3.1
 
 ] (./figs/Q2007_57_6.tex) (./figs/Q2007_58_7.tex) [2] (./figs/Q2007_59_8.tex)
 (./figs/Q2007_59_8_a.tex) (./figs/Q2007_59_8_b.tex) (./figs/Q2007_59_8_c.tex)
-(./figs/Q2007_59_8_d.tex) (./figs/Q2007_60_9.tex) [3] (./figs/Q2007_61_10.tex)
-(./figs/Q2007_62_11.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-(./figs/Q2007_62_11_a.tex) (./figs/Q2007_62_11_b.tex) (./figs/Q2007_62_11_c.tex
-) (./figs/Q2007_62_11_d.tex) (./figs/Q2007_63_12.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-(./figs/Q2007_63_12_a.tex) (./figs/Q2007_63_12_b.tex) (./figs/Q2007_63_12_c.tex
-) (./figs/Q2007_63_12_d.tex) (./figs/Q2007_65_14.tex)
-Underfull \vbox (badness 1910) has occurred while \output is active []
-
- [6]
-[7] [8] (./main.aux)
+(./figs/Q2007_59_8_d.tex) (./figs/Q2007_60_9.tex) [3] (./figs/Q2007_61_10.tex
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 3.
+)
+(./figs/Q2007_62_11.tex) [4] (./figs/Q2007_62_11_a.tex)
+(./figs/Q2007_62_11_b.tex) (./figs/Q2007_62_11_c.tex) (./figs/Q2007_62_11_d.tex
+) (./figs/Q2007_63_12.tex) (./figs/Q2007_63_12_a.tex) (./figs/Q2007_63_12_b.tex
+) (./figs/Q2007_63_12_c.tex) [5] (./figs/Q2007_63_12_d.tex)
+(./figs/Q2007_65_14.tex) [6] [7] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54256 strings out of 478287
- 1297657 string characters out of 5849290
- 1805677 words of memory out of 5000000
- 71454 multiletter control sequences out of 15000+600000
- 553214 words of font info for 205 fonts, out of 8000000 for 9000
+ 54210 strings out of 478287
+ 1296311 string characters out of 5849290
+ 1801333 words of memory out of 5000000
+ 71403 multiletter control sequences out of 15000+600000
+ 571432 words of font info for 255 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 106i,13n,107p,466b,1273s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,13n,107p,466b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist
@@ -1936,10 +1928,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive
 nts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 95417 bytes).
+Output written on main.pdf (7 pages, 96259 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 115 named destinations out of 1000 (max. 500000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
+ 114 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,31 +1,29 @@
 \begin{circuitikz}
-    \tikzstyle{every node}=[font=\normalsize]
-    \draw [->, >=Stealth] (2.25,7.5) -- (2.75,7.5);
-    \draw  (3.25,7.5) circle (0.5cm);
-    \draw [->, >=Stealth] (3.75,7.5) -- (4.75,7.5);
-    \draw [->, >=Stealth] (4.25,9.25) -- (4.75,9.25);
-    \draw (4.25,9.25) to[short] (4.25,7.5);
-    \draw  (4.75,9.75) rectangle (5.5,8.75);
-    \draw  (4.75,8) rectangle (5.5,7);
-    \draw [->, >=Stealth] (5.5,7.5) -- (6.25,7.5);
-    \draw  (6.75,7.5) circle (0.5cm);
-    \draw (5.5,9.25) to[short] (6.75,9.25);
-    \draw [->, >=Stealth] (6.75,9.25) -- (6.75,8);
-    \draw [->, >=Stealth] (7.25,7.5) -- (8,7.5);
-    \draw  (8,8) rectangle (10.75,7);
-    \draw [->, >=Stealth] (10.75,7.5) -- (11.75,7.5);
-    \draw [->, >=Stealth] (3.25,6) -- (3.25,7);
-    \draw (3.25,6) to[short] (9.5,6);
-    \draw (9.5,7) to[short] (9.5,6);
-    \node [font=\normalsize] at (3,7.5) {$   $};
-    \node [font=\normalsize] at (5,9) {$\frac{\kappa_i}{s}$};
-    \node [font=\normalsize] at (5,7.5) {$\kappa_p$};
-    \node [font=\normalsize] at (7,7.5) {$\Sigma$};
-    \node [font=\normalsize] at (3,7.5) {$   \Sigma$};
-    \node [font=\normalsize] at (9.5,7.5) {$\frac{\omega^2}{s^2 + 2\zeta\omega + \omega^2}$};
-    \draw (0.5,7.5) to[short] (1.25,7.5);
-    \draw (1.25,7.5) to[short] (1.25,8);
-    \draw (1.25,8) to[short] (2,8);
-    \node [font=\normalsize] at (2.5,8) {$1        $};
-    \node [font=\normalsize] at (1.5,7.5) {$0 $};
+	\tikzstyle{every node}=[font=\large]
+	\draw (0.5,6.5) to[short] (1,6.5);
+	\draw (1,6.5) to[short] (1,7);
+	\draw (1,7) to[short] (1.75,7);
+	\draw [->, >=Stealth] (2,6.5) -- (3.25,6.5);
+	\node [font=\large] at (2.5,7) {$+$};
+	\node [font=\large] at (2.5,6) {$-$};
+	\draw  (3.75,6.5) circle (0.5cm) node {\large $\Sigma$} ;
+	\draw [->, >=Stealth] (4.25,6.5) -- (5.25,6.5);
+	\draw [->, >=Stealth] (4.75,8.75) -- (5.25,8.75);
+	\draw (4.75,8.75) to[short] (4.75,6.5);
+	\draw  (5.25,9.25) rectangle  node {\large $\frac{\kappa_i}{s}$} (6,8.25);
+	\draw  (5.25,7) rectangle  node {\large $\kappa_p$} (6,6);
+	\draw [->, >=Stealth] (6,6.5) -- (7,6.5);
+	\draw  (7.5,6.5) circle (0.5cm) node {\large $\Sigma$} ;
+	\draw (6,8.75) to[short] (7.5,8.75);
+	\draw [->, >=Stealth] (8,6.5) -- (8.5,6.5);
+	\draw [->, >=Stealth] (11.5,6.5) -- (12.25,6.5);
+	\draw [->, >=Stealth] (3.75,5.25) -- (3.75,6);
+	\draw (3.75,5.25) to[short] (11.75,5.25);
+	\draw (11.75,6.5) to[short] (11.75,5.25);
+	\draw  (8.5,7) rectangle  node {\large $\frac{\omega^2}{s^2 + 2\zeta\omega + \omega^2}$} (11.5,6);
+	\draw [->, >=Stealth] (7.5,8.75) -- (7.5,7)node[pos=0.5,right, fill=white]{$z$};
+	\node [font=\large] at (6.5,6) {+};
+	\node [font=\large] at (6.5,7) {+};
+	\node [font=\large] at (0.5,6.75) {0};
+	\node [font=\large] at (1.75,7.25) {1};
 \end{circuitikz}

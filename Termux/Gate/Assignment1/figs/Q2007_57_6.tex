@@ -1,35 +1,26 @@
 \begin{circuitikz}
-    \tikzstyle{every node}=[font=\small]
-    \draw (1.75,11.75) to[opening switch] (3,11.75);
-    \draw (3,11.75) to[R] (4,11.75);
-    \draw (4,11.75) to[short] (4.5,11.75);
-    \draw (5,11.75) to[short] (5,10);
-    \draw (5,11.75) to[short] (5,10);
-    \draw (5.25,11.75) to[short] (5.25,10);
-    \draw (5.75,11.75) to[L ] (5.75,10.5);
-    \draw (5.75,10.25) to[L ] (5.75,9);
-    \draw (4.5,11.75) to[L ] (4.5,9);
-    \draw (1.75,11.75) to[battery1] (1.75,9);
-    \draw (1.75,9) to[short] (4.5,9);
-    \draw (5,10) to[short] (5,9);
-    \draw (5.25,10) to[short] (5.25,9);
-    \draw (5.75,11.75) to[short] (6.25,11.75);
-    \draw (5.75,10.5) to[short] (8,10.5);
-    \draw (8,10.5) to[short] (8,11.75);
-    \draw (5.75,9) to[short] (8,9);
-    \draw (8,9) to[short] (8,10.25);
-    \draw (5.75,10.25) to[C] (8,10.25);
-    \draw (6.25,11.75) to[R] (7.75,11.75);
-    \draw (8,11.75) to[short] (7.5,11.75);
-    \draw [->, >=Stealth] (4,9.5) -- (4,11);
-    \draw [->, >=Stealth] (6.5,12.25) -- (7.75,12.25);
-    \node [font=\normalsize] at (2.5,12.25) {};
-    \node [font=\normalsize] at (1,10.25) {25$\vee$};
-    \node [font=\normalsize] at (3.5,10.25) {$V_p$};
-    \node [font=\normalsize] at (7,12.75) {$I_R$};
-    \node [font=\small] at (5,12.25) {$T_1$};
-    \node [font=\normalsize] at (2.5,12.25) {SW};
-    \node [font=\small] at (7.5,11.25) {R};
-    \node [font=\small] at (7.5,9.75) {C};
+	\tikzstyle{every node}=[font=\normalsize]
+	\draw (2.75,9.75) to[battery1,l=$25V$] (2.75,6.75);
+	\draw (2.75,9.75) to[opening switch,l={ \normalsize SW}] (4.25,9.75);
+	\draw (4.25,9.75) to[R] (5.75,9.75);
+	\draw (5.75,9.75) to[L ] (5.75,6.75);
+	\draw (2.75,6.75) to[short] (5.75,6.75);
+	\draw [->, >=Stealth] (5.5,7.5) -- (5.5,9)node[pos=0.5,left, fill=white]{$V_p$};
+	\node at (5.5,9.25) [circ] {};
+	\draw (7,9.75) to[L ] (7,8.5);
+	\draw (7,8) to[L ] (7,6.75);
+	\draw (8.75,8) to[C,l={ \normalsize $C$}] (7,8);
+	\draw (7,8.5) to[short] (8.75,8.5);
+	\draw (8.75,9.75) to[R,l={ \normalsize $R$}] (7,9.75);
+	\draw (7,6.75) to[short] (8.75,6.75);
+	\draw (8.75,9.75) to[short] (8.75,8.5);
+	\draw (8.75,8) to[short] (8.75,6.75);
+	\draw (6.25,9.75) to[short] (6.25,6.75);
+	\node at (7.5,7) [circ] {};
+	\draw (6.5,9.75) to[short] (6.5,6.75);
+	\node [font=\normalsize] at (6.5,10) {$T_1$};
+	\draw [->, >=Stealth] (7.25,10.25) -- (8.5,10.25)node[pos=0.5,above, fill=white]{$I_R$};
+	\node at (7.5,9.25) [circ] {};
 \end{circuitikz}
+
 

@@ -1,15 +1,13 @@
 \begin{circuitikz}
-    \tikzstyle{every node}=[font=\normalsize]
-    \draw (2.75,7.25) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $\omega$}] (2.75,10.25);
-    \draw (5.5,7.25) to[L,l={ \normalsize L} ] (5.5,10.25);
-    \draw (2.75,10.25) to[short] (3.25,10.25);
-    \draw (2.75,7.25) to[short] (3.25,7.25);
-    \draw (3.25,7.25) to[C,l={ \small C}] (5.5,7.25);
-    \draw (5.5,10.25) to[R,l={ \normalsize R}] (3.25,10.25);
-    \node at (3.25,10.25) [circ] {};
-    \node at (3.25,7.25) [circ] {};
-    \node at (3.25,10.25) [circ] {};
-    \node at (3.25,7.25) [circ] {};
-    \node [font=\normalsize] at (3,10.75) {    A};
-    \node [font=\normalsize] at (3,6.75) {    B};
+	\tikzstyle{every node}=[font=\large]
+	\draw (2,6) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \large $\omega$}] (2,9);
+	\draw (2,9) to[short] (3,9);
+	\draw (2,6) to[short] (3,6);
+	\draw (3,9) to[R,l={ \large R}] (5,9);
+	\draw (3,6) to[C,l={ \large C}] (5,6);
+	\draw (5,9) to[L,l={ \large L} ] (5,6);
+	\node at (2.75,9) [circ] {};
+	\node at (2.75,6) [circ] {};
+	\node [font=\large] at (2.75,6.5) {B};
+	\node [font=\large] at (2.75,8.5) {A};
 \end{circuitikz}
