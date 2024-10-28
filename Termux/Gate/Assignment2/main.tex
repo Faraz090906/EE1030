@@ -1,0 +1,273 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\pgfplotsset{compat=1.18}
+
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\title{Assignment 2}
+\author{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\begin{enumerate}
+
+    %1st Question
+    \item 
+    A bar is subjected to fluctuating tensile load from $20 kN$ to $100 kN$. The material has yield strength of $240 MPa$ and endurance limit in reversed bending is $160 MPa$. According to the Soderberg principle, the area of cross-section in $mm^2$ of the bar for a factor of safety of 2 is
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $400$
+            \item $600$
+            \item $750$
+            \item $1000$
+        \end{enumerate}
+    \end{multicols}
+
+    %2nd Question
+    \item 
+    A simply supported beam of length $L$ is subjected to a varying distributed load $\sin{\frac{3\pi x}{L}} Nm^{-1}$, where the distance $x$ is measured from the left support. The magnitude of the vertical reaction force in $N$ at the left support is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item Zero
+            \item $\frac{L}{3\pi}$
+            \item $\frac{L}{\pi}$
+            \item $\frac{2L}{\pi}$
+        \end{enumerate}
+    \end{multicols}
+
+    %3rd Question
+    \item 
+    Two large diffuse gray parallel plates, separated by a small distance, have surface temperatures of $400 K$ and $300 K$. If the emissivities of the surfaces are $0.8$ and the Stefan-Boltzmann constant is $5.67 \times 10^{-8}\frac{W}{m^2K^4}$, the net radiation heat exchange rate in $\frac{kW}{m^2}$ between the two plates is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $0.66$
+            \item $0.79$
+            \item $0.99$
+            \item $3.96$
+        \end{enumerate}
+    \end{multicols}
+
+    %4th Question
+    \item 
+    A hinged gate of length $5 m$, inclined at $30^\degree$ with the horizontal and with water mass on its left, is shown in the figure below. Density of water is $1000 \frac{kg}{m^3}$. The minimum mass of the gate in kg per unit width \brak{\text{perpendicular to the plane of paper}}, required to keep it closed is
+
+    \begin{figure}[H]
+    \centering
+    \resizebox{0.7\textwidth}{!}{\input{figs/2013_43_4}}
+
+\label{fig:my_label}
+\end{figure}
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $5000$
+            \item $6600$
+            \item $7546$
+            \item $9623$
+        \end{enumerate}
+    \end{multicols}
+
+    %5th Question 
+    \item 
+    The pressure, temperature and velocity of air flowing in a pipe are $5 bar$, $500 K$ and $50 \frac{m}{s}$ respectively. The specific heats of air at constant pressure and at constant volume are $1.005 \frac{KJ}{kgK}$ and $0.718 \frac{KJ}{kgK}$ respectively. Neglect potential energy. If the pressure and temperature of the surroundings are $1 bar$ and $300 K$, respectively, the available energy in $\frac{kJ}{kg}$ of the air stream is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $170$
+            \item $187$
+            \item $191$
+            \item $213$
+        \end{enumerate}
+    \end{multicols}
+
+    %6th Question
+    \item
+    The probability that a student knows the correct answer to a multiple choice question is $\frac{2}{3}$ . If the student does not know the answer, then the student guesses the answer. The probability of the guessed answer being correct is $\frac{1}{4}$. Given that the student has answered the question correctly, the conditional probability that the student knows the correct answer is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $\frac{2}{3}$
+            \item $\frac{3}{4}$
+            \item $\frac{5}{6}$
+            \item $\frac{8}{9}$
+        \end{enumerate}
+    \end{multicols}
+
+    %7th Question 
+    \item 
+    The solution of the differential equation 
+    \begin{align*}
+        \frac{d^2u}{dx^2} - k\frac{du}{dx} = 0
+    \end{align*}
+    where $k$ is a constant, subjected to the boundary conditions $u\brak{0} = 0$ and $u\brak{L} = U$, is 
+
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $u = \displaystyle U \frac{x}{L}$
+            \item $u = \displaystyle U\brak{\frac{1-e^{kx}}{1-e^{kL}}}$
+            \item $u = \displaystyle U\brak{\frac{1-e^{-kx}}{1-e^{-kL}}}$
+            \item $u = \displaystyle U\brak{\frac{1+e^{kx}}{1+e^{kL}}}$
+        \end{enumerate}
+    \end{multicols}
+
+    %8th Question 
+    \item 
+    The value of the definite integral
+    \begin{align*}
+        \int_1^e \sqrt{x}\ln{\brak{x}}\, dx
+    \end{align*}
+    is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $\frac{4}{9}\sqrt{e^3} + \frac{2}{9}$
+            \item $\frac{2}{9}\sqrt{e^3} - \frac{4}{9}$
+            \item $\frac{2}{9}\sqrt{e^3} + \frac{4}{9}$
+            \item $\frac{4}{9}\sqrt{e^3} - \frac{2}{9}$
+        \end{enumerate}
+    \end{multicols}
+
+    \section{Common Data Questions}
+    \subsection{Common Data for Questions 48 \& 49:}
+    A single riveted lap joint of two similar plates as shown in the figure below has the following geometrical
+    and material details.
+
+
+    width of the plate $w = 200 mm$, thickness of the plate $t = 5 mm$, number of rivets $n = 3$, diameter of the rivet $d_r = 10 mm$, diameter of the rivet hole $d_h = 11 mm$, allowable tensile stress of the plate $\sigma_p = 200 MPa$, allowable shear stress of the rivet $\sigma_s = 100 MPa$ and allowable bearing stress of the rivet $\sigma_c = 150 MPa$.\\
+
+    \begin{figure}[H]
+    \centering
+    \resizebox{0.8\textwidth}{!}{\input{figs/2013_48_49_9_10}}%
+
+\label{fig:my_label}
+\end{figure}
+
+    %9th Question
+    \item 
+    If the rivets are to be designed to avoid crushing failure, the maximum permissible load $P$ in $kN$ is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $7.50$
+            \item $15.00$
+            \item $22.50$
+            \item $30.00$
+        \end{enumerate}
+    \end{multicols}
+
+    %10th Question
+    \item 
+    If the plates are to be designed to avoid tearing failure, the maximum permissible load $P$ in $kN$ is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $83$
+            \item $125$
+            \item $167$
+            \item $501$
+        \end{enumerate}
+    \end{multicols}
+
+
+    \subsection{Common Data for Questions 50 \& 51:}
+    Water $\brak{\text{specific heat, } c_p = 4.18 \frac{KJ}{kgK}}$ nters a pipe at a rate of $0.01 \frac{kg}{s}$ and a temperature of $20^\degree C$. The pipe, of diameter $50 mm$ and length $3 m$, is subjected to a wall heat flux $q^{\prime\prime}$ in $\frac{W}{m^2}$\\
+    
+    %11th Question
+    \item 
+    If$q_W^{\prime\prime} = 2500x $, where $x$ is in m and in the direction of flow $\brak{x = 0\text{ at the inlet}}$, the bulk mean temperature of the water leaving the pipe in $^\degree C$ is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $42$
+            \item $62$
+            \item $74$
+            \item $104$
+        \end{enumerate}
+    \end{multicols}
+
+    %12th Question
+    \item
+    If $q_W^{\prime\prime} = 5000$ and the convection heat transfer coefficient at the pipe outlet is $1000\frac{W}{m^2K}$, the temperature in $^\degree C$ at the inner surface of the pipe at the outlet is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $71$
+            \item $76$
+            \item $79$
+            \item $81$
+        \end{enumerate}
+    \end{multicols}
+
+    \section{Linked Answer Questions}
+    \subsection{Statement for Linked Answer Questions 52 \& 53:}
+    In orthogonal turning of a bar of $100 mm$ diameter with a feed of $0.25 \frac{mm}{rev}$, depth of cut of $4 mm$ and cutting velocity of $90 \frac{m}{min}$, it is observed that the main \brak{\text{tangential}} cutting force is perpendicular to the friction force acting at the chip-tool interface. The main \brak{\text{tangential}} cutting force is $1500 N$.\\
+
+    %13th Question
+    \item 
+    The orthogonal rake angle of the cutting tool in $degree$ is
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item zero
+            \item $3.58$
+            \item $5$
+            \item $7.16$
+        \end{enumerate}
+    \end{multicols}
+
+\end{enumerate}
+\end{document}
+    \item 
