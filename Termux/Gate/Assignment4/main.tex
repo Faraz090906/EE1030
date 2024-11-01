@@ -1,0 +1,207 @@
+\let\negmedspace\undefinedx
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\title{Assignment 4}
+\author{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\section{MA: Mathematics}
+\subsection{Carry one mark each}
+	\begin{enumerate}
+		%1st Question
+		\item 
+		If $\brak{x_1^*, x_2^*}$ is an optional solution of the linear programming problem, minimize $x_1 + 2x_2$ subject to 
+		\begin{align*}
+			4x_1 - x_2 & \geq 8\\
+			2x_1 + x_2 & \geq 10\\
+			-x_1 + x_2 & \leq 7\\
+			x_1, x_2 & \geq 0
+		\end{align*}
+		and \brak{\lambda_1^*, \lambda_2^*, \lambda_3^*} is an optional solution of its dual problem, then $\sum_{i = 1}^2 x_i^*0 + \sum_{j = 1}^3 \lambda_j^*$ is equal to \rule{2cm}{0.1pt} \brak{\text{correct upto one decimal place}}
+
+		%2nd Question 
+		\item 
+		let $a, b, c \in \mathbf{R}$ be such that the quadrature rule 
+		\begin{align*}
+			\int_{-1}^1 f\brak{x}\, dx \approx af\brak{-1} + bf\brak{0} + cf^\prime\brak{1} 
+		\end{align*}
+
+		is exact for all polynomials of degree less than or equal to 2. Then $b$ is equal to \rule{2cm}{0.1pt} \brak{\text{rounded off to two decimal places}}
+
+		%3rd Question 
+		\item 
+		Let $f\brak{x} = x^4$ and let $p\brak{x}$ be the interpolating polynomial of $f$ at nodes 1,2 and 3. Then $p\brak{0}$ is equal to \rule{2cm}{0.1pt}
+
+		%4th Question
+		\item
+		For $n \geq 2$, define the sequece $\cbrak{x_n}$ by 
+		\begin{align*} 
+			x_n = \frac{1}{2\pi}\int_0^{\frac{\pi}{2}} tan^{\frac{1}{n}}{t}\, dt. 
+		\end{align*}
+		Then the sequence $\cbrak{x_n}$ converges to \rule{2cm}{0.1pt}\\ \brak{\text{correct up to two decimal places}}
+
+		%5th Question 
+		\item 
+		\begin{align*}
+			L^2\sbrak{0,10} = \cbrak{f:\sbrak{0,10}\mapsto \mathbf{R}: f \text{ is lebesgue measurable and }\int_0^{10}f^2dx < \infty}
+		\end{align*}
+		equipped with the norm $\norm{f} = \brak{\int_0^{10} f^2\, dx}^{\frac{1}{2}}$ and let $T$ be the linear functional on $L^2\sbrak{0,10}$ given by 
+		\begin{align*}
+			T\brak{f} = \int_0^2 f\brak{x}\, dx - \int_3^{10} f\brak{x}\, dx.
+		\end{align*}
+		Then $\norm{T}$ is equal to \rule{2cm}{0.1pt}
+
+		%6th Question 
+		\item 
+		if $\cbrak{x_{13}, x_{22}, x_{23} = 10, x_{31}, x_{32}, x_{34}}$ is the set of basic variable of  balanced transportation problem seeking to minimize cost of transportation from origins to destinations, where the cost matrix is, 
+		%\begin{table}
+		%	\centering
+		%	\input{tables/2020_2_23_6}
+		%\end{table}
+		and $\lambda, \mu \in \mathbf{R}$ is equal to \rule{2cm}{1pt}
+
+		%7th Question 
+		\item 
+		Let $\mathbf{Z}_{225}$ be the ring of integers modulo 225. If $x$ is the number of prime ideals and $y$ is the number of non trivial units $\mathbf{Z}_{225}$, then $x + y$ is equal to \rule{2cm}{0.1pt}
+
+		%8th Question 
+		\item 
+		let $u\brak{x,t}$ be the solution of
+		\begin{align*}
+		\frac{\partial^2 u}{\partial t^2} - \frac{\partial^2 u}{\partial x^2} = 0, u\brak{x,0} = f\brak{x}, \frac{\partial u}{\partial t}\brak{x,0} = 0, x\in \mathbf{R}, t > 0,
+		\end{align*}
+		Where $f$ is twice continuously differentiable function. If $f\brak{-2} = 4, f\brak{0} = 0$ and $u\brak{2,2} = 8$, then each value of $u\brak{1,3}$ is \rule{2cm}{0.1pt}
+
+\subsection{Carry two marks each}
+		%9th Question 
+		\item 
+		Let $\cbrak{e_n}_{n = 1}^{\infty}$ be an orthomormal basis for a separable Hilbert space $H$ with the inner product $\langle \cdot, \cdot \rangle$. Define 
+		\begin{align*}
+			f_n = e_n - \frac{1}{n + 1}e_{n + 1} \text{ for } n \in \mathbf{N}
+		\end{align*}
+		Then 
+		\begin{enumerate}
+			\item the closure of the span $\cbrak{f_n : n \in \mathbf{N}}$ equals $H$
+			\item $f = 0$ if $\langle{f}, f_n \rangle = \langle f, e_n \rangle$ for all $ n \in \mathbf{N}$
+			\item $\cbrak{f_n}_{n = 1}^{\infty}$ is an orthogonal subset of $H$
+			\item there does not exist non zero $f \in H$ such that $\langle f , e_2\rangle = \langle{f}, f_2\rangle$
+		\end{enumerate}
+
+		%10th Question 
+		\item
+			Suppose $V$ is finite dimensional non-zero vector space over $\mathbf{C}$ and $T: V \mapsto V$ is a linear transformation such that Range$\brak{T}$ = Nullspace$\brak{T}$. Then which of following statements is FALSE?
+		
+		\begin{enumerate}
+			\item The dimensions of $V$ is even 
+			\item 0 is the only eigenvalue of $T$
+			\item Both 0 and 1 are the eigen values of $T$
+			\item $T^2 = 0$
+		\end{enumerate}
+
+		%11th Question 
+		\item 
+		Let $P \in M_{m \times n}\brak{R}$. Consider the following statements:
+		%\begin{tabular}
+		%\end{tabular}
+		Then 
+		\begin{enumerate}
+			\begin{multicols}{2}
+			\item both $\mathrm{I}$ and $\mathrm{II}$ are true
+			\item $\mathrm{I}$ is true but $\mathrm{II}$ is false 
+			\item $\mathrm{I}$ is false but $\mathrm{II}$ is true
+			\item both $\mathrm{I}$ and $\mathrm{II}$ are false
+			\end{multicols}
+		\end{enumerate}
+
+		%12th Question
+		\item 
+			For $n \in \mathbf{N}$, let $T_n: \brak{l^1,\norm{\cdot}_1} \mapsto \brak{l^{\infty}, \norm{\cdot}_{\infty}}$ and $T: \brak{l^1,\norm{\cdot}_1} \mapsto \brak{l^{\infty}, \norm{\cdot}_{\infty}}$ be the bounded linear operators defined by 
+		\begin{align*}
+			T_n\brak{x_1,x_2,\dots} = \brak{y_1, y_2, \dots}, \text{ where } y_j = 
+			\begin{cases}
+				x_j ,& j \leq n\\
+				x_n ,& j > n
+			\end{cases}\\
+		\end{align*}
+		and 
+		\begin{align*}
+			T\brak{x_1, x_2, \dots} = \brak{x_1, x_2, \dots}
+		\end{align*}
+		Then 
+		\begin{enumerate}
+			\item $\norm{T_n}$ does not converge to $\norm{T}$ as $n\to \infty$
+			\item $\norm{T_n - T}$ converges to zero as $n\to \infty$
+			\item for all $x \in l^1$, $\norm{T_n\brak{x} - T\brak{x}}$ converges to zero as $n\to \infty$
+			\item for each non-zero $x \in l^1$, there exists a continuous linear functional $g$ on $l^{\infty}$ such that $g\brak{T_n\brak{x}}$ does not converge to $g\brak{T\brak{x}}$ as $n\to \infty$
+		\end{enumerate}
+
+		%13th Question 
+		\item 
+		Let $P\brak{\mathbf{R}}$ denote the power set of $\mathbf{R}$, equipped with the metric 
+		\begin{align*}
+			d\brak{U,V} = \text{sup}_{x \in \mathbf{R}}\abs{\chi_U\brak{x} - \chi_V\brak{x}},
+		\end{align*}
+		where $\chi_U$ and $\chi_V$ denote the characteristic function of subsets $U$ and $V$, respectively of $\mathbf{R}$. The set $\cbrak{\cbrak{m}:m \in \mathbf{Z}}$ in the metric space $\brak{P\brak{\mathbf{R}}, d}$ is 
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item bounded but not totally bounded 
+				\item totally bounded but not compact
+				\item compact 
+				\item not bounded
+			\end{enumerate}
+		\end{multicols}
+	\end{enumerate}
+\end{document}
