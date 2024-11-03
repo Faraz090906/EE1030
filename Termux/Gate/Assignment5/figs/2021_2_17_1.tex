@@ -1,0 +1,20 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [ line width=1.6pt](2.25,9.25) to[short] (2.25,7);
+\draw [line width=1pt, short] (2.25,9.25) -- (2,9);
+\draw [line width=1pt, short] (2,8.75) -- (2.25,9);
+\draw [line width=1pt, short] (2.25,8.75) -- (2,8.5);
+\draw [line width=1pt, short] (2.25,8.5) -- (2,8.25);
+\draw [line width=1pt, short] (2.25,8.25) -- (2,8);
+\draw [line width=1pt, short] (2.25,8) -- (2,7.75);
+\draw [line width=1pt, short] (2.25,7.75) -- (2,7.5);
+\draw [line width=1pt, short] (2.25,7.5) -- (2,7.25);
+\draw [line width=1pt, short] (2.25,7.25) -- (2,7);
+\draw [ line width=2pt](2.25,8.25) to[short] (7.75,8.25);
+\draw [ line width=2pt](2.25,8) to[short] (7.75,8);
+\draw [line width=2pt, short] (7.75,8.25) -- (7.75,8);
+\draw [line width=0.5pt, <->, >=Stealth] (2.5,8.5) -- (7.5,8.5)node[pos=0.5, fill=white]{L};
+\draw [line width=0.5pt, ->, >=Stealth] (8,8.75) .. controls (8.25,8.25) and (8.25,7.75) .. (8,7.25) node[pos=0.5,right, fill=white]{M};
+\draw [line width=0.5pt, ->, >=Stealth] (2.25,7.5) -- (4,7.5);
+\node [font=\normalsize] at (3,7.25) {X};
+\end{circuitikz}

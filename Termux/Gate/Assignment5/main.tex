@@ -1,0 +1,226 @@
+\let\negmedspace\undefinedx
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\title{Assignment 4}
+\author{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\section{ME, SET-1}
+\subsection{MCQ - Carry ONE mark each}
+\begin{enumerate}
+		%1st Question 
+	\item A cantilever beam of length $L$ and flexural rigidity, $EI$, is subjected to an end momen, $M$, as shown in the figure. The deflection of the beam at $x = \frac{L}{2}$ is 
+		
+		\begin{figure}[H]
+		\centering
+		\resizebox{0.5\textwidth}{!}{\input{figs/2021_2_17_1}}
+		\end{figure}
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\frac{ML^2}{2EI}$
+				\item $\frac{ML^2}{4EI}$
+				\item $\frac{ML^2}{8EI}$
+				\item $\frac{ML^2}{16EI}$
+			\end{enumerate}
+		\end{multicols}
+
+		%2nd Question 
+	\item A prismatic bar $PQRST$ is subjected to axial loads as shown in the figure. The segments having maximum and minimum axial stresses, respectively, are 
+
+		\begin{figure}[H]  
+                \centering
+                \resizebox{0.6\textwidth}{!}{\input{figs/2021_2_18_2}}
+                \end{figure}
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item $QR$ and $PQ$
+				\item $ST$ and $PQ$
+				\item $QR$ and $RS$
+				\item $ST$ and $RS$
+			\end{enumerate}
+		\end{multicols}
+
+		%3rd question 
+	\item Sheer stress distribution on the cross-section of the coil wire in a helical compression spring is shown in the figure. This sheer stress distribution respresents
+		
+		\begin{figure}[H]
+                \centering    
+                \resizebox{0.3\textwidth}{!}{\input{figs/2021_2_19_3}}    
+                \end{figure} 
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		\begin{enumerate}
+			\item direct sheer stress in the coil wire cross-section 
+			\item torsional shear stress in the coil wire cross-section
+			\item combined direct shear and torsional shear stress in th coil wire crosstion
+			\item combined direct shear and torsional shear along with the effect of stress concentration at inside edge of the coil wire cross-section
+		\end{enumerate}
+\end{enumerate}
+\subsection{Numerical Type - Carry ONE mark each}
+\begin{enumerate}
+		%4th Question
+	\item Robot Ltd. wishes to maintain enough safety stock during the lead time period between starting a new production run and its completion such that he probability of satisfying the customer demand during the lead time period is $95\%$. The lead time period in 5 days and daily customer demand can be assumed to follow the Gaussian (normal) distribution with mean 50 units and a standard deviation of 10 units. Using $\phi^{-1}\brak{0.95} = 1.64$, where $\phi$ respresents the cummulative distribution function of the standard normal random variable, the amount of safety stock that must be maintained by Robot Ltd. to achieve this demand fulfillment probability for the lead time period \rule{2cm}{0.1pt} \brak{\text{round off to decimal places}}.
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		%5th Question 
+	\item A pressure measurement device fitted on the surface of a submarine, located at a depth $H$ below the surface of an ocean, reads an absolute pressure of $4.2 MPa$. The density of a sea water is $1050\frac{kg}{m^3}$, the atmospheric pressure is $101 kPa$ and the acceleration due to gravity is $9.8\frac{m}{s^2}$. The depth $H$ \rule{1cm}{0.1pt} $m$ \brak{\text{round off to nearest integer}}.
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		%6th Question 
+	\item Consider fully developed, steady state incompressible laminar flow of a viscous fluid between two large parallel horizontal plates. The bottom plate is fixed and the top plate moves with velocity of $U = 4 \frac{m}{s}$. Separation between plates is $5 mm$. There is no pressure gradient in the direction of $1.25 \times 10^{-4} \frac{m^2}{s}$. The average shear stress in the fluid is \rule{1cm}{0.1pt} $Pa$ \brak{\text{round off to nearest integer}}.
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		%7th Question 
+	\item A rigid insulated tank is initially evacuated. It is connected through a value to a supply line that carries air at a constant pressure and temperature of $250 kPa$ and $400 K$ respectively. Now the valve is opened and air is allowed to flow into the tank until the pressure inside the tank reaches to $250 kPa$ at which point valve is closed. Assume that the air beaves as a perfect gas with constant properties. $\brak{c_p = 1.005 \frac{kJ}{\brak{kg-K}}, c_v = 0.718 \frac{kJ}{\brak{kg-K}}, R = 0.287 \frac{kJ}{\brak{kg-K}}}$.Final temperature of the air inside the tank is \rule{1cm}{0.1pt} K \brak{\text{round off to one decimal places}}
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		%8th Question
+	\item The figure shows an arrangement of a heavy propeller shaft in a ship. The combiined polar mass moment of inertia of the propeller and the shaft is $100 kg-m^2$. The propeller rotates at $\omega = 12 \frac{rad}{s}$. The waves acting on the ship hull induces a rolling motion as shown in the figure with an angular velocity of $5 \frac{rad}{s}$. The gyroscopic moment generated on the shaft due to the motion described is \rule{1cm}{0.1pt} $N-m$ . \brak{\text{round off to the nearest integer}}
+
+		\begin{figure}[H]  
+                \centering
+                \resizebox{0.7\textwidth}{!}{\input{figs/2021_3_24_8}}
+                \end{figure}
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		%9th Question
+	\item Consider a single degreeof freedom system comprising a mass M supported on a spring and a dashpot as swn in the figure.
+
+		\begin{figure}[H]
+                \centering
+                \resizebox{0.4\textwidth}{!}{\input{figs/2021_3_25_9}}
+                \end{figure}
+
+	If the amplitude of the free vibration response reduces from 8 mm to 1.5 mm in 3 cycles, the damping ratio of the system is \rule{1cm}{0.1pt} \brak{\text{round off to three decimal places}}
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		%10th Question
+\item Consider a vector $p$ in 2-dimensional space. Let it direction \brak{\text{counter-clockwise angle with the positive x-axis}} be $\theta$. Let $p$ be an eigen vector of a $2 \times 2$ matrix A with corresponding eigen value $\lambda, \lambda > 0$. If we denote the magnitude of a vector $v$ by $\norm{v}$, identify the VALID statement regarding $p^{\prime}$, where $p^{\prime} = Ap$.
+		
+		\hfill{\brak{\text{2021 MA}}}
+		
+		\begin{enumerate}
+			\item Direction of $p^{\prime} = \lambda \theta, \norm{p^{\prime}} = \norm{p}$
+			\item Direction of $p^{\prime} = \theta, \norm{p^{\prime}} = \lambda \norm{p}$
+			\item Direction of $p^{\prime} = \lambda \theta, \norm{p^{\prime}} = \lambda \norm{p}$
+			\item Direction of $p^{\prime} = \theta, \norm{p^{\prime}} = \frac{\norm{p}}{\lambda}$
+		\end{enumerate}
+
+		%11th Question 
+	\item Let $C$ respresent the unit circle centerted at origin in the complex plane, and complex variable, $ z = x + \iota y$. The value of the contour integral 
+		\begin{align*}
+			\oint_{c} \frac{\cosh{3z}}{2z} 
+		\end{align*}
+	\brak{\text{where integration is taken counter clockwise}} is
+
+		\hfill{\brak{\text{2021 MA}}}
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item 0 
+				\item $2$
+				\item $\pi\iota$
+				\item $2\pi\iota$
+			\end{enumerate}
+		\end{multicols}
+
+		%12th Question 
+	\item A set of jobs A,x` B, C, D, E, F, G, H arrive at time $ t = 0 $ for processing on turning and griding machines. Each job needs to be processed in sequence first on the turning machine and second on the grinding must occur immediately after turning. The processing times of the jobs are given below. 
+		\begin{table}
+			\centering
+			\input{tables/2021_3_28_12}
+		\end{table}
+	If the makespan is to be minimized, then the optimal sequence in which these jobs must be processed on the turning and grinding machines is 
+		
+		\hfill{\brak{\text{2021 MA}}}
+
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item A-E-D-F-H-C-G-B
+				\item A-D-E-F-H-C-G-B
+				\item G-E-D-F-H-C-A-B
+				\item B-G-C-H-F-D-E-A
+			\end{enumerate}
+		\end{multicols}
+
+		%13th Question 
+	\item The fundamental thermodynamic relation for a rubber band is given by $dU = TdS + \tau dL$, where $T$ is the absolute temperature, S is the entropy, $\tau$ is the tension in the rubber band, and L is the length of the rubber band. Which one of the following relationsis CORRECT:
+		
+		\hfill{\brak{\text{2021 MA}}}
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\tau = \brak{\frac{\partial U}{\partial S}}_L$ 
+				\item $\brak{\frac{\partial T}{\partial L}}_S = \brak{\frac{\partial \tau}{\partial S}}_L$
+				\item $\brak{\frac{\partial T}{\partial S}}_L = \brak{\frac{\partial \tau}{\partial L}}_S$
+				\item $T = \brak{\frac{\partial U}{\partial S}}_{\tau}$
+			\end{enumerate}
+		\end{multicols}
+\end{enumerate}
+\end{document}
+
