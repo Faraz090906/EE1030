@@ -33,7 +33,7 @@ def main(a, b, c, x_start, x_end, num_points, area_start, area_end):
     area = lib.area(ctypes.byref(p), area_start, area_end)  # Calculate area using C function
 
     # Corrected print statement for area calculation
-    print(f"Calculated Area (using Riemann sum) from ({area_start}, "
+    print(f"Calculated Area (using Riemann sum) from ({area_start},"
           f"{function(a, b, c, area_start):.2f}) to ({area_end}, "
           f"{function(a, b, c, area_end):.2f}): {area:.2f}")
 

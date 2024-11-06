@@ -18,7 +18,7 @@ double function(Parabola *p) {
 double area(Parabola *p, double lower_limit, double upper_limit) {
     double sum = 0.0;
     double delta_x = 1e-7; // Width of each rectangle
-    int num_points = (int)((upper_limit - lower_limit) / delta_x); // Total number of rectangles
+    int num_points = (int)((upper_limit - lower_limit) / delta_x);
 
     for (int i = 0; i < num_points; i++) {
         p->x = lower_limit + i * delta_x; // Set x value from lower limit to upper limit
@@ -29,13 +29,14 @@ double area(Parabola *p, double lower_limit, double upper_limit) {
 }
 
 // Generate points in the range from x_start to x_end and store them in the arrays
-void generate_points(Parabola *p, double x_start, double x_end, int num_points, double *points_x, double *points_y) {
+void generate_points(Parabola *p, double x_start, double x_end, int num_points, double *points_x, double *points_y) 
+{
     double delta_x = (x_end - x_start) / (num_points - 1);
     
     for (int i = 0; i < num_points; i++) {
-        p->x = x_start + i * delta_x; // Set the x value
+        p->x = x_start + i * delta_x; 
         points_x[i] = p->x;
-        points_y[i] = function(p); // Calculate the y value for each x
+        points_y[i] = function(p); 
     }
 }
 

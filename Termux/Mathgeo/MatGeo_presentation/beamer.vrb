@@ -1,0 +1,10 @@
+\frametitle{Python: To plot the points}
+\lstset{
+        language = Python,
+        basicstyle=\ttfamily\tiny,
+        keywordstyle=\color{blue},
+        stringstyle=\color{green},
+        commentstyle=\color{gray},
+        tabsize=4
+    }
+    \lstinputlisting{./codes/plot.py}

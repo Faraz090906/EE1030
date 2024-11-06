@@ -1,0 +1,193 @@
+\let\negmedspace\undefinedx
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\title{Assignment 5}
+\author{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\section{Carry TWO marks Each}
+\begin{enumerate}
+		%1st Question 
+	\item A student performed X-rays diffraction experiment on a FCC polycrystalline pure metal. The following $\sin^{2}{\theta}$ values were calculated from the diffraction peaks. 
+		\begin{align*}
+			\sin^{2}{\theta} = 0.136, 0.185, 0.504, 0.544
+		\end{align*}
+	However, the student was negligent and missed noting one of the peaks. Which one of the following Miller indices corresponds to the missing peak? 
+		
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\brak{200}$
+				\item $\brak{220}$
+				\item $\brak{311}$
+				\item $\brak{222}$
+			\end{enumerate}
+		\end{multicols}
+
+		%2nd Question 
+	\item Match the lattice planes and directions \brak{\text{in Column }\mathrm{I}} with the corresponding Miller indices \brak{\text{in Column }\mathrm{I}}
+		\begin{multicols}{2}
+			\textbf{Column} $\mathrm{I}$
+			\begin{enumerate}
+				\item[P]
+				\item[Q]
+				\item[R]
+				\item[S]
+			\end{enumerate}
+			\columnbreak
+			\textbf{Column} $\mathrm{II}$
+			\begin{enumerate}
+				\item[1] $\brak{\hat{1}11}$
+				\item[2] $\brak{\hat{1}12}$
+				\item[3] $\brak{\hat{2}21}$
+				\item[4] $\brak{\hat{1}10}$
+			\end{enumerate}
+		\end{multicols}
+		\begin{enumerate}
+			\item P-2, Q-4, R-1, S-3 
+			\item P-3, Q-1, R-4, S-2
+			\item P-2, Q-4, R-3, S-1
+			\item P-3, Q-4, R-2, S-1
+		\end{enumerate}
+
+		%3rd Question 
+	\item Match the hardness test \brak{\text{in Column }\mathrm{I}} with its indenter type \brak{\text{in Column }\mathrm{II}}
+		\begin{multicols}{2}
+			\textbf{Column} $\mathrm{I}$
+			\begin{enumerate}
+				\item [P] Brinell
+				\item [Q] Rockwell
+				\item [R] Vickers
+			\end{enumerate}
+			\columnbreak
+			\textbf{Column} $\mathrm{II}$
+			\begin{enumerate}
+				\item[1] Diamond pyramidal
+				\item[2] Diamond cone
+				\item[3] Tungsten carbide sphere
+				\item[4] Steel sphere
+			\end{enumerate}
+		\end{multicols}
+
+		\begin{enumerate}
+			\item P-2, Q-4, R-1
+			\item P-4, Q-2, R-3
+			\item P-3, Q-4, R-2
+			\item P-4, Q-2, R-1
+		\end{enumerate}
+
+		%4th Question 
+	\item TTT diagram of a eutectoid steel is shown below. Match the heat treatment cycle \brak{\text{in Column }\mathrm{I}} with its microstructure \brak{\text{in Column }\mathrm{II}}
+
+
+		\begin{multicols}{2}
+			\textbf{Column} $\mathrm{I}$
+			\begin{enumerate}
+				\item P
+				\item Q
+				\item R
+			\end{enumerate}
+			\columnbreak
+                        \textbf{Column} $\mathrm{II}$
+			\begin{enumerate}
+				\item[1] Bainite only
+				\item[2] Pearlite only
+				\item[3] Pearlite + Bainite + Martensite
+				\item[4] Pearlite + Martensite
+			\end{enumerate}
+		\end{multicols}
+
+		\begin{enumerate}
+			\item P-1, Q-2, R-4
+			\item P-2, Q-3, R-2
+			\item P-2, Q-4, R-1
+			\item P-2, Q-3, R-1
+		\end{enumerate}
+
+		%5th Question
+	\item Which of the following statement\brak{\text{s}} is/are true for an optical microscope?
+		
+		\begin{enumerate}
+			\item Increasing the aperture of the objective lens deteriorates the resolution
+			\item Reducing the wavelength of illuminating light improves the resolution
+			\item Increasing the refractive index of the medium in between the sample and the objective lens improves the resolution
+			\item Reducing the wavelength of illuminating light decreases the depth of field
+		\end{enumerate}
+
+		%6th Question 
+	\item Among the 14 Bravais lattices, there is no base centred cubic unit cell. Which of the following statement\brak{\text{s}} is/are true?
+		\begin{enumerate}
+			\item The base-centred cubic unit cell is same as the simple tetragonal unit cell
+			\item The base-centred cubic unit cell is same as the body centred tetragonal unit cell
+			\item The base-centred cubic unit cell is same as the simple orthorhombic unit cell
+			\item The base-centred cubic unit cell does not have any 3-fold rotation axis
+		\end{enumerate}
+
+		%7th Question 
+	\item Specific heat $\brak{C_v}$ of a material was found to depend on temperature as shown below. Which of the following statement\brak{\text{s}} is/are true 
+		\begin{enumerate}
+			\item The material is metallic
+			\item The material is insulating
+			\item The material is three dimensional
+			\item The material is one dimensional
+		\end{enumerate}
+
+		%8th Question 
+	\item A pure Silicon wafer is doped with Boron by exposing it to $B_2O_3$ vapour at an elevated temperature. It takes 1000 seconds to reach a Boron concentration of $10^{20} atoms-m^{-3}$ at a depth of $1\mu m$ is \brak{\text{in seconds}}:\rule{1cm}{0.1pt} \brak{\text{rounded
+off to nearest integer}}
+	Given: Boron concentration on the wafer surface remains constant.
+
+		%9th Question
+
+\end{document}
