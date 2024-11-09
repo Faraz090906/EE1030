@@ -1,0 +1,109 @@
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Column I} & \textbf{Column II}\\
+\hline
+(P) \resizebox{0.15\textwidth}{!}{\begin{tikzpicture}
+    % Define points for the cube
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,0);
+    \coordinate (C) at (2,2);
+    \coordinate (D) at (0,2);
+    \coordinate (E) at (1,1);
+    \coordinate (F) at (3,1);
+    \coordinate (G) at (3,3);
+    \coordinate (H) at (1,3);
+
+    % Draw edges of the cube
+    \draw[thick] (A) -- (B) -- (C) -- (D) -- (A); % Bottom square
+    \draw[thick] (E) -- (F) -- (G) -- (H) -- (E); % Top square
+    \draw[thick] (A) -- (E); % Left edge
+    \draw[thick] (B) -- (F); % Right edge
+    \draw[thick] (C) -- (G); % Top right edge
+    \draw[thick] (D) -- (H); % Top left edge
+    \draw[->,thick](A) -- (1.5,2.5);
+    % Labels
+    \node[below left, scale=2] at (A) {$a$};
+    \node[below right, scale=2] at (B) {$b$};
+    \node[above, scale=2] at (G) {$c$};
+\end{tikzpicture}} & 1. $\brak{\overline{1}11}$\\
+\hline
+(Q) \resizebox{0.15\textwidth}{!}{\begin{tikzpicture}
+    % Define points for the cube
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,0);
+    \coordinate (C) at (2,2);
+    \coordinate (D) at (0,2);
+    \coordinate (E) at (1,1);
+    \coordinate (F) at (3,1);
+    \coordinate (G) at (3,3);
+    \coordinate (H) at (1,3);
+
+    % Draw edges of the cube
+    \fill[gray!30] (B) -- (E) -- (H) -- (C) -- (B);
+    \draw[thick] (A) -- (B) -- (C) -- (D) -- (A); % Bottom square
+    \draw[thick] (E) -- (F) -- (G) -- (H) -- (E); % Top square
+    \draw[thick] (A) -- (E); % Left edge
+    \draw[thick] (B) -- (F); % Right edge
+    \draw[thick] (C) -- (G); % Top right edge
+    \draw[thick] (D) -- (H); % Top left edge
+    \draw[thick] (B) -- (E) -- (H) -- (C) -- (B);
+
+    % Labels
+    \node[below left, scale=2] at (A) {$a$};
+    \node[below right, scale=2] at (B) {$b$};
+    \node[above, scale=2] at (G) {$c$};
+\end{tikzpicture}} & 2. $\sbrak{\overline{1}12}$\\
+\hline
+(R) \resizebox{0.15\textwidth}{!}{\begin{tikzpicture}
+    % Define points for the cube
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,0);
+    \coordinate (C) at (2,2);
+    \coordinate (D) at (0,2);
+    \coordinate (E) at (0.8,0.8);
+    \coordinate (F) at (3,0.8);
+    \coordinate (G) at (3,3);
+    \coordinate (H) at (0.8,3);
+
+    % Draw edges of the cube
+    \fill[gray!30] (D) -- (E) -- (B) -- (D);
+    \draw[thick] (A) -- (B) -- (C) -- (D) -- (A); % Bottom square
+    \draw[thick] (E) -- (F) -- (G) -- (H) -- (E); % Top square
+    \draw[thick] (A) -- (E); % Left edge
+    \draw[thick] (B) -- (F); % Right edge
+    \draw[thick] (C) -- (G); % Top right edge
+    \draw[thick] (D) -- (H); % Top left edge
+    \draw[thick] (D) -- (E) -- (B) -- (D);
+
+    % Labels
+    \node[below left, scale=2] at (A) {$a$};
+    \node[below right, scale=2] at (B) {$b$};
+    \node[above, scale=2] at (G) {$c$};
+\end{tikzpicture}} & 3. $\sbrak{\overline{2}21}$\\
+\hline
+(S) \resizebox{0.15\textwidth}{!}{\begin{tikzpicture}
+    % Define points for the cube
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,0);
+    \coordinate (C) at (2,2);
+    \coordinate (D) at (0,2);
+    \coordinate (E) at (1,1);
+    \coordinate (F) at (3,1);
+    \coordinate (G) at (3,3);
+    \coordinate (H) at (1,3);
+
+    % Draw edges of the cube
+    \draw[thick] (A) -- (B) -- (C) -- (D) -- (A); % Bottom square
+    \draw[thick] (E) -- (F) -- (G) -- (H) -- (E); % Top square
+    \draw[thick] (A) -- (E); % Left edge
+    \draw[thick] (B) -- (F); % Right edge
+    \draw[thick] (C) -- (G); % Top right edge
+    \draw[thick] (D) -- (H); % Top left edge
+    \draw[->,thick](A) -- (3,2);
+    % Labels
+    \node[below left, scale=2] at (A) {$a$};
+    \node[below right, scale=2] at (B) {$b$};
+    \node[above, scale=2] at (G) {$c$};
+\end{tikzpicture}} & 4. $\brak{\overline{1}10}$\\
+\hline
+\end{tabular}
