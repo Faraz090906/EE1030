@@ -1,0 +1,122 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}   
+\usepackage{multicol}
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\nCr}[2]{\,^{#1}C_{#2}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Assignment-2}
+\author{EE24BTECH11049}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+	\item Which of the following is the negation of the statement "for all M $\geq$ 0, there exists x $\in \vec{S}$ such that $x\geq M$"?\hfill{[July 2021]}
+		\begin{enumerate}
+			\item there exists M $\geq$ 0 such that x $\leq$ M for all x $\in \vec{S}$
+			\item there exists M $\geq$ 0 there exists x $\in \vec{S}$ such that x $\geq$ M
+			\item there exists M $\geq$ 0 there exists x $\in \vec{S}$ such that x $\leq$ M
+			\item there exists M $\geq$ 0 such that x $\geq$ M for all x $\in \vec{S}$
+		\end{enumerate}
+	\item Consider a circle C which touches the y-axis at $\myvec{0,6}$ and cuts off an intercept $6\sqrt{5}$ on the x-axis. Then the radius of the circle C is equal to :\hfill{[July 2021]}
+		\begin{enumerate}
+				\begin{multicols}{4}
+				\item $\sqrt{53}$
+				\item 9
+				\item 8
+				\item $\sqrt{82}$
+				\end{multicols}
+		\end{enumerate}
+	\item Let $\vec{a}$, $\vec{b}$ and $\vec{c}$ be three vectors such that $\vec{a} = \vec{b} \times \brak{\vec{b} \times \vec{c}}$. If magnitudes of the vectors $\vec{a}$, $\vec{b}$ and $\vec{c}$ are $\sqrt{2}$, 1 and 2 respectively and the angle between $\vec{b}$ and $\vec{c}$ is $\theta \brak{0 \leq \theta \leq \frac{\pi}{2}}$, then the value of 1 + $\tan{\theta}$ is equal to :\hfill{[July 2021]}
+		\begin{enumerate}
+				\begin{multicols}{4}
+				\item $\sqrt{3}$ + 1
+				\item 2
+				\item 1
+				\item $ \frac{\sqrt{3} + 1}{\sqrt{3}}$
+				\end{multicols}
+		\end{enumerate}
+	\item Let $\vec{A}$ and $\vec{B}$ be two 3 $\times$ 3 real matrices such that $\vec{A^2 - B^2}$ is invertible matrix. If $\vec{A^5} = \vec{B^5}$ and $\vec{A^3B^2} = \vec{A^2B^3}$, then the value of the determinant of the matrix $\vec{A^3 + B^3}$ is equal to :\hfill{[July 2021]}
+		\begin{enumerate}
+				\begin{multicols}{4}
+				\item 2
+				\item 4
+				\item 1
+				\item 0
+				\end{multicols}
+		\end{enumerate}
+	\item Let $ f : \brak{a,b} \to \vec{R}$ be twice differentiable function such that $ f(x) = \int_{a}^{x} g(t) dt$ for a differentiable function g(x). If f(x) = 0 has exactly five distinct roots in \brak{a,b}, then $g(x)g^{\prime}{x} = 0$ has atleast :\hfill{[July 2021]}
+		\begin{enumerate}
+			\item twelve roots in \brak{a,b}
+			\item five roots in \brak{a,b}
+			\item seven roots in \brak{a,b}
+			\item three roots in \brak{a,b}
+		\end{enumerate}
+\end{enumerate}
+
+\section{Integer-Type Questions}
+\begin{enumerate}
+	\item Let $\vec{a} = \vec{i} - \alpha\vec{j} + \beta\vec{k}$, $\vec{b} = 3\vec{i} + \beta\vec{j} - \alpha\vec{k}$ and $\vec{c} = -\alpha\vec{i} - 2\vec{j} + \vec{k}$, where $\alpha$, $\beta$ are integers. If $\vec{a} \cdot \vec{b} = -1$ and $\vec{b} \cdot \vec{c} = 10$, then $\brak{\vec{a} \times \vec{b}} \cdot \vec{c}$ is equal to :\hfill{[July 2021]}
+	\item The distance of the point P$\myvec{3,4,4}$ from the point of intersection of the line joining the points Q$\myvec{3,-4,5}$ and R$\myvec{2,-3,1}$ and the plane $2x+y+z=7$, is equal to :\hfill{[July 2021]}
+	\item If the real part of the complex number $ z = \frac{3+2i\cos{\theta}}{1-3i\cos{\theta}}$, $\theta \in \brak{0, \frac{\pi}{2}}$ is zero, then the value of $\sin^{2}{3\theta} + \cos^{2}{\theta}$ is equal to :\hfill{[July 2021]}
+	\item Let $\vec{E}$ be an ellipse whose axes are parallel to the co-ordinate axes, having its centre at $\myvec{3,-4}$, one focus at $\myvec{4,-4}$ and one vertex at $\myvec{5,-4}$. If $mx - y = 4$, m>0 is a tangent to the ellipse $\vec{E}$, then the value of 5$m^2$ is equal to :\hfill{[July 2021]}
+	\item If $\int_{0}^{\pi} \brak{\sin^{3}{x}}e^{-\sin^{2}{x}} dx = \alpha - \frac{\beta}{e} \int_{0}^{1} \sqrt{t}e^{t} dt$, then $\alpha + \beta$ is equal to :\hfill{[July 2021]}
+	\item The number of real roots of the equation $ e^{4x} - e^{3x} - 4e^{2x} - e^{x} + 1 = 0$ is equal to :\hfill{[July 2021]}
+	\item Let $ y = y(x) $ be the solution of the differential equation $ dy = e^{\alpha x + y} dx $; $\alpha \in \vec{R}$. If $ y\brak{log\brak{2}} = log\brak{2}$ and $y(0) = log\brak{\frac{1}{2}}$, then the value of $\alpha$ is equal to :\hfill{[July 2021]}
+	\item Let $n$ be a non-negative integer. Then the number of divisors of the form "4n+1" of the number $\brak{10}^{10}\brak{11}^{11}\brak{13}^{13}$ is equal to :\hfill{[July 2021]}
+	\item Let $A = \cbrak{n \in \vec{N} | n^2 \leq n + 10,000}$, $B = \cbrak{3k+1 | k \in \vec{N}}$ and $C = \cbrak{2k | k \in \vec{N}}$, then the sum of all the elements of the set $ A \cap \brak{ B-C}$ is equal to ;\hfill{[July 2021]}
+	\item If $A = \myvec{1&1&1\\0&1&1\\0&0&1}$ and $M = A + A^2 + A^3 + \dots + A^{20} $, then the sum of all the elements of the matrix $M$ is equal to :\hfill{[July 2021]}
+\end{enumerate}
+\end{document}
