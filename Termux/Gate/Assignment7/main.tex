@@ -1,1 +1,213 @@
+\let\negmedspace\undefinedx
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
 
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\title{Assignment 6}
+\author{EE24BTECH11049 \\ Patnam Shariq Faraz Muhammed}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\section{Carry ONE mark Each}
+\begin{enumerate}
+    %1st Question
+    \item 
+    Which one of the options given represents the feasible region of the linear programming model:
+    \begin{align*}
+        \text{Maximize } 45X_1 + 60X_2\\
+        X_1 \leq 45\\
+        X_2 \leq 50 \\
+        10X_1 + 10X_2 \geq 600\\
+        25X_1 + 5X_2 \leq 750 
+    \end{align*}
+
+   %fig
+
+    \begin{enumerate}
+        \item Region P
+        \item Region Q
+        \item Region R
+        \item Region S
+    \end{enumerate}
+
+    %2nd Question 
+    \item 
+    A cuboidal part has to be accurately positioned first, arresting six degrees of freedom and then clamped in a fixture, to be used for machining. Locating pins in the form of cylinders with hemi-spherical tips are to be placed on the fixture for positioning. Four different configurations of locating pins are proposed as shown. Which one of the options given is correct?
+
+    %figs
+
+    \begin{enumerate}
+        \item Configuration $P_1$ arrests 6 degrees of freedom, while Configurations $P_2$ and $P_4$ are over-constrained and Configuration $P_3$ is under-constrained.
+        \item Configuration $P_2$ arrests 6 degrees of freedom, while Configurations $P_1$ and $P_3$ are over-constrained and Configuration $P_4$ is under-constrained.
+        \item Configuration $P_3$ arrests 6 degrees of freedom, while Configurations $P_2$ and $P_4$ are over-constrained and Configuration $P_1$ is under-constrained.
+        \item Configuration $P_4$ arrests 6 degrees of freedom, while Configurations $P_1$ and $P_3$ are over-constrained and Configuration $P_2$ is under-constrained.
+    \end{enumerate}
+
+    %3rd Question 
+    \item 
+    The effective stiffness of a cantilever beam of length $L$ and flexural rigidity $El$ subjected to a transverse tip load $W$ is
+
+    %fig
+        
+    \begin{enumerate}
+        \item $\frac{3El}{L^3}$
+        \item $\frac{2El}{L^3}$
+        \item $\frac{L^3}{2El}$
+        \item $\frac{L^3}{3El}$
+    \end{enumerate}
+    
+    %4th Question 
+    \item 
+    The options show frames consisting of rigid bars connected by pin joints. Which one of the frames is non-rigid?
+    \begin{enumerate}
+        \item figs
+    \end{enumerate}
+
+    %5th Question
+    \item 
+    The $S-N$ curve from a fatigue test for steel is shown. Which one of the options gives the endurance limit?
+
+    %fig
+
+    \begin{enumerate}
+        \item $S_{ut}$
+        \item $S_{2}$
+        \item $S_{3}$
+        \item $S_{4}$
+    \end{enumerate}
+
+    %6th Question
+    \item 
+    Air (density = 1.2 $\frac{kg}{m^3}$, kinematic viscosity = $1.5 \times 10^{-5}\frac{m^2}{s}$) flows over a flat plate with a free-stream velocity of 2 $\frac{m}{s}$. The wall shear stress at a location 15 $mm$ from the leading edge is $\tau_W$. What is the wall shear stress at a location 30 $mm$ from the leading edge?
+    \begin{enumerate}
+        \item $\frac{\tau_W}{2}$
+        \item $\sqrt{2}\tau_W$
+        \item $2\tau_W$
+        \item $\frac{\tau_W}{\sqrt{2}}$
+    \end{enumerate}
+
+    %7th Question
+    \item 
+    Consider an isentropic flow of air (ratio of specific heats = 1.4) through a duct as shown in the figure.
+
+    The variations in the flow across the cross-section are negligible. The flow conditions at Location 1 are given as follows:
+    \begin{align*}
+        P_1 = 100kPa, \rho_1 = 1.2 \frac{kg}{m^3}, u_1 = 400\frac{m}{s}
+    \end{align*}
+    The duct cross-sectional area at Location 2 is given by $A_2 = 2A_1$,where $A_1$ denotes the duct cross-sectional area at Location 1. Which one of the given statements about the velocity $u_2$ and pressure $P_2$ at the Location 2 is TRUE?
+
+    %fig
+
+    \begin{enumerate}
+        \item $u_2 < u_1$, $P_2 < P_1$
+        \item $u_2 < u_1$, $P_2 > P_1$
+        \item $u_2 > u_1$, $P_2 < P_1$
+        \item $u_2 > u_1$, $P_2 > P_1$
+    \end{enumerate}
+
+    %8th Question 
+    \item 
+    Consider incompressible laminar flow of a constant property Newtonian fluid in an isothermal circular tube. The flow is steady with fully-developed temperature and velocity profiles. The Nusselt number for this flow depends on
+    \begin{enumerate}
+        \item neither the Reynolds number nor the Prandtl number
+        \item both the Reynolds and Prandtl numbers
+        \item the Reynolds number but not the Prandtl number
+        \item the Prandtl number but not the Reynolds number
+    \end{enumerate}
+
+    %9th Question
+    \item 
+    A heat engine extracts heat \brak{Q_H} from a thermal reservoir at a temperature of $1000 K$ and rejects heat \brak{Q_L} to a thermal reservoir at a temperature of $100 K$, while producing work \brak{W}. Which one of the combinations of \sbrak{Q_H, Q_L \text{ and } W} given is allowed?
+    \begin{enumerate}
+        \item $Q_H = 2000 J, Q_L = 500 J ,W = 1000 J$
+        \item $Q_H = 2000 J, Q_L = 750 J,W = 1000 J$
+        \item $Q_H = 6000 J, Q_L = 500 J ,W = 5500J$
+        \item $Q_H = 6000 J, Q_L = 600 J ,W = 5500 J$
+    \end{enumerate}
+
+    %10th Question
+    \item 
+    Two surfaces P and Q are to be joined together. In which of the given joining operation(s), there is no melting of the two surfaces P and Q for creating the joint?
+    \begin{enumerate}
+        \item Arc welding
+        \item Brazing
+        \item Adhesive bonding
+        \item Spot welding
+    \end{enumerate}
+
+    %11th Question
+    \item
+    A beam is undergoing pure bending as shown in the figure. The stress $\brak{\sigma}$-strain $\brak{\epsilon}$ curve for the material is also given. The yield stress of the material is $\sigma_Y$.Which of the option(s) given represent(s) the bending stress distribution at cross-section AA after plastic yielding?
+
+    %12th Question
+    \item 
+    In a metal casting process to manufacture parts, both patterns and moulds provide shape by dictating where the material should or should not go. Which of the option(s) given correctly describe(s) the mould and the pattern?
+
+    \begin{enumerate}
+        \item Mould walls indicate boundaries within which the molten part material is allowed, while pattern walls indicate boundaries of regions where mould material is not allowed.
+        \item Moulds can be used to make patterns.
+        \item Pattern walls indicate boundaries within which the molten part material is allowed, while mould walls indicate boundaries of regions where mould material is not allowed.
+        \item Patterns can be used to make moulds.
+    \end{enumerate}
+
+    %13th Question
+    \item The principal stresses at a point P in a solid are $70 MPa, -70 MPa \text{ and } 0$. The yield stress of the material is $100 MPa$. Which prediction(s) about material failure at P is/are CORRECT?
+
+    \begin{enumerate}
+        \item Maximum normal stress theory predicts that the material fails
+        \item Maximum shear stress theory predicts that the material fails
+        \item Maximum normal stress theory predicts that the material does not fail
+        \item Maximum shear stress theory predicts that the material does not fail
+    \end{enumerate}
+\end{enumerate}
+\end{document}
